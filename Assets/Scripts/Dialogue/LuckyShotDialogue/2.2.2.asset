@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0fbe96774845a74bb51c24510f21e78, type: 3}
+  m_Name: 2.2.2
+  m_EditorClassIdentifier: 
+  answer: you do? do you like my mane too?
+  question: mhmmm!!
+  opt1: {fileID: 0}
+  opt2: {fileID: 0}
+  endInteraction: 1
