@@ -12,4 +12,5 @@ public class DialogueNode : Node
     
     public string flirtLine;
     public string ourLine;
+    public bool goodEnd;
 }

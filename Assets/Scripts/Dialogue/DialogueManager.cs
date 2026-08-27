@@ -6,6 +6,9 @@ using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
+    public Horse horse;
+    public GameObject myButton;
+    public MessagesManager messagesManager;
     public DialogueGraph dialogueGraph;
     public Button optButton1;
     public Button optButton2;
@@ -21,7 +24,8 @@ public class DialogueManager : MonoBehaviour
 
     void Start()
     {
-        // Find the entry node (the one with nothing connected to its input)
+        messagesManager = this.transform.parent.GetComponent<MessagesManager>();
+
         foreach (XNode.Node node in dialogueGraph.nodes)
         {
             DialogueNode dNode = node as DialogueNode;
@@ -33,6 +37,11 @@ public class DialogueManager : MonoBehaviour
         }
 
         LoadNode(currentNode);
+    }
+    public void OpenMessageTab()
+    {
+        messagesManager.ChangeTab(this.gameObject);
+        Debug.Log(messagesManager);
     }
 
     private void LoadNode(DialogueNode node)
@@ -90,7 +99,15 @@ public class DialogueManager : MonoBehaviour
     IEnumerator OptionRoutine(DialogueNode next)
     {
         NewBox(next.ourLine, false);
+
+        optButton1.interactable = false;
+        optButton2.interactable = false;
+
         yield return new WaitForSeconds(responseTime);
+
+        optButton1.interactable = true;
+        optButton2.interactable = true;
+
         LoadNode(next);
     }
     /*
