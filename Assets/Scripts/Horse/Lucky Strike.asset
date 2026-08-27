@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: Lucky Strike
   m_EditorClassIdentifier: 
   horseName: Lucky Strike
-  horseSprite: {fileID: 0}
+  horseSprite: {fileID: 21300000, guid: 28c2f0b3d802727469b4ec1ad853729a, type: 3}
+  horsePictures: []
   matchable: 1
   bio: 
+  textDialogue: {fileID: 0}
+  dateDialogue: {fileID: 0}
   answers: 00000001010100000101000000000100000000000100010100010000000101000000010101000001

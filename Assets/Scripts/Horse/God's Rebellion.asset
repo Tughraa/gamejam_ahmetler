@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: God's Rebellion
   m_EditorClassIdentifier: 
   horseName: God's Rebellion
-  horseSprite: {fileID: 0}
+  horseSprite: {fileID: 21300000, guid: 28c2f0b3d802727469b4ec1ad853729a, type: 3}
+  horsePictures: []
   matchable: 1
   bio: 
+  textDialogue: {fileID: 0}
+  dateDialogue: {fileID: 0}
   answers: 01000001000100010001010000000101000001000000000000000001000100000001000001000101

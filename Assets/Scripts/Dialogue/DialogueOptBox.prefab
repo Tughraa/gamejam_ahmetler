@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3301032835550564532}
   - component: {fileID: 8184453002748552098}
   - component: {fileID: 4923744652831833698}
+  - component: {fileID: 6655015580592538063}
   - component: {fileID: 7866869885034822542}
   m_Layer: 5
   m_Name: DialogueOptBox
@@ -77,6 +78,52 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6655015580592538063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2859957632597359752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9bbc59b522aa6543bece57d619d2e9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animLength: 0.3
+  sizeAnim:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.016666412
+      value: 0.25473022
+      inSlope: 0.48901072
+      outSlope: 0.48901072
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.8960687
+      value: 0.68476737
+      inSlope: 1.7610486
+      outSlope: 1.7610486
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 3.0330863
+      outSlope: 3.0330863
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &7866869885034822542
 MonoBehaviour:
   m_ObjectHideFlags: 0

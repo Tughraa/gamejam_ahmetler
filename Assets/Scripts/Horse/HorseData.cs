@@ -6,6 +6,7 @@ public class HorseData : ScriptableObject
 {
     public string horseName;
     public Sprite horseSprite;
+    public string horseBio;
     public Sprite[] horsePictures;
     public Boolean matchable;
     [TextArea] public string bio;

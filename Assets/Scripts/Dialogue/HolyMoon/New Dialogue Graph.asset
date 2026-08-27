@@ -61,6 +61,7 @@ MonoBehaviour:
   opt2: {fileID: 0}
   flirtLine: "te\u015Fekk\xFCrler"
   ourLine: "buna da \u015F\xFCk\xFCr g\xFCzelim"
+  goodEnd: 0
 --- !u!114 &-458553753717074163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,6 +120,7 @@ MonoBehaviour:
   opt2: {fileID: 0}
   flirtLine: "valla kuzenim.. \xF6\u011Frenciydik, b\u0131rakt\u0131k"
   ourLine: "ne i\u015Fle u\u011Fra\u015F\u0131yon"
+  goodEnd: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,6 +197,7 @@ MonoBehaviour:
   opt2: {fileID: 0}
   flirtLine: selam naber
   ourLine: 
+  goodEnd: 0
 --- !u!114 &4545178645952665782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,6 +256,7 @@ MonoBehaviour:
   opt2: {fileID: 0}
   flirtLine: "churchill alay\u0131m bne"
   ourLine: "ne i\xE7ersin"
+  goodEnd: 1
 --- !u!114 &8433266932456586916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -314,3 +318,4 @@ MonoBehaviour:
   opt2: {fileID: 0}
   flirtLine: "te\u015Fekk\xFCrler"
   ourLine: "iyi, sen nas\u0131ls\u0131n"
+  goodEnd: 0

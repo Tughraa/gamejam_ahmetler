@@ -6,12 +6,13 @@ using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
-    public Horse horse;
+    public HorseData horse;
     public Button myButton;
     public MessagesManager messagesManager;
     public DialogueGraph dialogueGraph;
     public Button optButton1;
     public Button optButton2;
+    public Button askOutButton;
     public Transform contentRect;
     public GameObject optBoxFab;
     public float boxOffset = 20f;
@@ -22,9 +23,12 @@ public class DialogueManager : MonoBehaviour
 
     private DialogueNode currentNode;
 
+    bool isOver = false;
+
     void Start()
     {
         messagesManager = this.transform.parent.GetComponent<MessagesManager>();
+        UpdateHorseData(horse);
 
         foreach (XNode.Node node in dialogueGraph.nodes)
         {
@@ -37,6 +41,13 @@ public class DialogueManager : MonoBehaviour
         }
 
         LoadNode(currentNode);
+    }
+    public void UpdateHorseData(HorseData data)
+    {
+        horse = data;
+        //dialogueGraph = data.textDialogue;
+        myButton.transform.GetChild(0).GetComponent<TMP_Text>().text = data.horseName;
+        myButton.transform.GetChild(1).GetComponent<Image>().sprite = data.horseSprite;
     }
     public void OpenMessageTab()
     {
@@ -66,12 +77,30 @@ public class DialogueManager : MonoBehaviour
             optButton1.onClick.AddListener(() => SelectOption(next1));
         }
 
-        if (hasOpt2)
+        if (hasOpt2)        //myButton.interactable = false;
         {
             DialogueNode next2 = port2.Connection.node as DialogueNode;
             optButton2.transform.GetChild(0).GetComponent<TMP_Text>().text = next2.ourLine;
             optButton2.onClick.RemoveAllListeners();
             optButton2.onClick.AddListener(() => SelectOption(next2));
+        }
+        if (!hasOpt1 && !hasOpt2)
+        {
+            EndDialogue(node.goodEnd);
+        }
+    }
+    public void EndDialogue(bool good)
+    {
+        isOver = true;
+        if (good)
+        {
+            askOutButton.gameObject.SetActive(true);
+            optButton1.gameObject.SetActive(false);
+            optButton2.gameObject.SetActive(false);
+        }
+        else
+        {
+            myButton.interactable = false;
         }
     }
 
