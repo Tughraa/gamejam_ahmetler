@@ -7,7 +7,7 @@ using TMPro;
 public class DialogueManager : MonoBehaviour
 {
     public Horse horse;
-    public GameObject myButton;
+    public Button myButton;
     public MessagesManager messagesManager;
     public DialogueGraph dialogueGraph;
     public Button optButton1;

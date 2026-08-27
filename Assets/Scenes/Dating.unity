@@ -2716,6 +2716,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horse: {fileID: 0}
+  myButton: {fileID: 0}
   messagesManager: {fileID: 0}
   dialogueGraph: {fileID: 11400000, guid: b15acaaaf016f2f4e8c5011d7e743c8e, type: 2}
   optButton1: {fileID: 2026297147}
@@ -3821,6 +3822,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horse: {fileID: 0}
+  myButton: {fileID: 0}
   messagesManager: {fileID: 0}
   dialogueGraph: {fileID: 11400000, guid: 3ec8aa25b38845d4a82647f896650fbf, type: 2}
   optButton1: {fileID: 1763000624}
