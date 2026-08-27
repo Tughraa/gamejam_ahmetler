@@ -56,10 +56,31 @@ public class SwipeEffect : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
             // Right swipe = test match trigger
             if (!_swipeLeft)
             {
-                ScreenManager.Instance?.OpenMatchScreen();
+                HandleLikeSwipe();
             }
 
             StartCoroutine(MovedCard());
+        }
+    }
+
+    private void HandleLikeSwipe()
+    {
+        CardDisplay display = GetComponent<CardDisplay>();
+        if (display != null && display.horseData != null && PlayerData.Instance != null)
+        {
+            bool[] playerAnswers = PlayerData.Instance.playerAnswers;
+            bool isMatch = MatchEvaluator.EvaluateMatch(display.horseData, playerAnswers, out float matchPercent);
+
+            if (isMatch)
+            {
+                // Open match overlay and pass data
+                ScreenManager.Instance?.OpenMatchScreen();
+                Debug.Log($"Matched with {display.horseData.horseName}! ({matchPercent * 100}%)");
+            }
+            else
+            {
+                Debug.Log($"Passed threshold check on {display.horseData.horseName}: No match ({matchPercent * 100}%).");
+            }
         }
     }
 
