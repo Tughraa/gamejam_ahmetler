@@ -1,63 +1,73 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Build.Reporting;
 using UnityEngine;
 
 public class SecondCard : MonoBehaviour
 {
     private SwipeEffect _swipeEffect;
     private GameObject _firstCard;
-    private Vector3 _originalScale;
-    private bool _isSwipeCompleted = false;
-    private float _step = 0.8f;
+    private Vector3 _originalScale = Vector3.one;
 
-    // Start is called before the first frame update
     void Awake()
     {
-        _originalScale = transform.localScale;
+        // Cache initial scale (or default to 1, 1, 1)
+        _originalScale = transform.localScale == Vector3.zero ? Vector3.one : transform.localScale;
     }
 
     void Start()
     {
-        _swipeEffect = FindObjectOfType<SwipeEffect>();
-        _firstCard = _swipeEffect.gameObject;
-        _swipeEffect.cardMoved += CardMovedFront;
-
-        transform.localScale =  new Vector3(36,36,36);
-
+        // Set visual start size to 80%
+        transform.localScale = _originalScale * 0.8f;
+        FindFrontCard();
     }
 
-    // Update is called once per frame
+    void FindFrontCard()
+    {
+        _swipeEffect = FindObjectOfType<SwipeEffect>();
+        if (_swipeEffect != null)
+        {
+            _firstCard = _swipeEffect.gameObject;
+            _swipeEffect.cardMoved += CardMovedFront;
+        }
+    }
+
     void Update()
     {
-        if (_isSwipeCompleted)
+        if (_firstCard == null || _swipeEffect == null)
         {
-            _step = Mathf.MoveTowards(_step, 1.0f, Time.deltaTime * 5f);
-            transform.localScale = _originalScale * _step;
+            FindFrontCard();
             return;
         }
+
         float distanceMoved = Mathf.Abs(_firstCard.transform.localPosition.x);
         float maxSwipeDistance = Screen.width / 2f;
-
         float dragPercentage = Mathf.Clamp01(distanceMoved / maxSwipeDistance);
 
-
-        if(Mathf.Abs(distanceMoved) > 0)
-        {
-            float step = Mathf.Lerp(0.8f, 1.0f, dragPercentage);
-            transform.localScale = _originalScale * step;
-        }
+        // Zoom from 80% to 100% based on swipe progress
+        float step = Mathf.Lerp(0.8f, 1.0f, dragPercentage);
+        transform.localScale = _originalScale * step;
     }
 
     void CardMovedFront()
     {
+        if (_swipeEffect != null)
+        {
+            _swipeEffect.cardMoved -= CardMovedFront;
+        }
+
+        // Snap to full size before taking over
+        transform.localScale = _originalScale;
+
+        // Upgrade to active swipe card
         gameObject.AddComponent<SwipeEffect>();
         Destroy(this);
-
     }
 
-    public void OnSwipeCompleted()
+    void OnDestroy()
     {
-        _isSwipeCompleted = true;
+        if (_swipeEffect != null)
+        {
+            _swipeEffect.cardMoved -= CardMovedFront;
+        }
     }
 }
