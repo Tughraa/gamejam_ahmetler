@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ae165336d40e8148a4348dd54ff5e46, type: 3}
   m_Name: Aurora
   m_EditorClassIdentifier: 
-  horseName: 
+  horseName: Aurora
   horseSprite: {fileID: 0}
+  matchable: 1
   bio: 
-  answers: 
+  answers: 01010100000001000100000100000000010000010101000000000100010100010100000000000000

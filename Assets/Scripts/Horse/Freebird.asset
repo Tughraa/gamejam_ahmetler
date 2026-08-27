@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ae165336d40e8148a4348dd54ff5e46, type: 3}
   m_Name: Freebird
   m_EditorClassIdentifier: 
-  horseName: 
+  horseName: Freebird
   horseSprite: {fileID: 0}
+  matchable: 1
   bio: 
-  answers: 
+  answers: 00000001010100000101000001010000000101000100010101010100010101000101010100010100

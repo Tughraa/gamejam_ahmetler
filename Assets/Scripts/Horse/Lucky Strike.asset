@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ae165336d40e8148a4348dd54ff5e46, type: 3}
   m_Name: Lucky Strike
   m_EditorClassIdentifier: 
-  horseName: 
+  horseName: Lucky Strike
   horseSprite: {fileID: 0}
-  matchable: 0
+  matchable: 1
   bio: 
-  answers: 
+  answers: 00000001010100000101000000000100000000000100010100010000000101000000010101000001
