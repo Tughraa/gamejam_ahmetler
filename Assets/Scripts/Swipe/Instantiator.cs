@@ -9,21 +9,33 @@ public class Instantiator : MonoBehaviour
     public List<HorseData> horseDeck = new List<HorseData>();
     private int _currentCardIndex = 0;
 
-    void InstantiateCard()
+    void Start()
+    {
+        CardDisplay[] startingCards = GetComponentsInChildren<CardDisplay>();
+
+        for (int i = startingCards.Length - 1; i >= 0; i--)
+        {
+            if (_currentCardIndex < horseDeck.Count)
+            {
+                startingCards[i].SetupCard(horseDeck[_currentCardIndex]);
+                _currentCardIndex++;
+            }
+        }
+    }
+
+    public void InstantiateCard()
     {
         if (cardPrefab == null || _currentCardIndex >= horseDeck.Count) return;
 
         GameObject newCard = Instantiate(cardPrefab, transform, false);
 
-        // Reset scale and position
         RectTransform rt = newCard.GetComponent<RectTransform>();
         if (rt != null)
         {
-            rt.anchoredPosition = Vector2.zero;
+            rt.anchoredPosition = new Vector2(39.3f, -18.5f);
             rt.localScale = Vector3.one;
         }
 
-        // Assign horse data to this card
         CardDisplay display = newCard.GetComponent<CardDisplay>();
         if (display != null)
         {
@@ -36,7 +48,6 @@ public class Instantiator : MonoBehaviour
 
     void Update()
     {
-        // Maintain 2 cards in the UI stack as long as we have horses left
         if (transform.childCount < 2 && _currentCardIndex < horseDeck.Count)
         {
             InstantiateCard();

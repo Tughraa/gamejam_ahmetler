@@ -1,63 +1,85 @@
+using System.Collections;
 using UnityEngine;
 
 public class SecondCard : MonoBehaviour
 {
-    private SwipeEffect _frontSwipeEffect;
-    private RectTransform _frontCardRect;
-    private readonly Vector3 _targetBaseScale = Vector3.one;
+    private FirstCard _frontCard;
+    private readonly Vector3 _minScale = Vector3.one * 0.8f;
+    private readonly Vector3 _maxScale = Vector3.one;
 
     void Start()
     {
-        transform.localScale = _targetBaseScale * 0.8f;
+        transform.localScale = _minScale;
         TryBindFrontCard();
     }
 
     void Update()
     {
-        // Continuously try to bind if the previous front card was destroyed
-        if (_frontSwipeEffect == null || _frontCardRect == null)
+        if (_frontCard == null)
         {
             TryBindFrontCard();
             return;
         }
 
-        // Follow front card drag progress
-        float distanceMoved = Mathf.Abs(_frontCardRect.anchoredPosition.x);
-        float maxSwipeDistance = Screen.width / 2f;
-        float progress = Mathf.Clamp01(distanceMoved / maxSwipeDistance);
-
-        float scaleFactor = Mathf.Lerp(0.8f, 1.0f, progress);
-        transform.localScale = _targetBaseScale * scaleFactor;
+        // Smoothly follow the front card's drag progress
+        transform.localScale = Vector3.Lerp(_minScale, _maxScale, _frontCard.NormalizedDragProgress);
     }
 
     private void TryBindFrontCard()
     {
-        SwipeEffect currentFront = FindObjectOfType<SwipeEffect>();
-        if (currentFront != null && currentFront.gameObject != this.gameObject)
+        FirstCard[] activeCards = FindObjectsOfType<FirstCard>();
+        foreach (FirstCard card in activeCards)
         {
-            _frontSwipeEffect = currentFront;
-            _frontCardRect = currentFront.GetComponent<RectTransform>();
-            _frontSwipeEffect.cardMoved += PromoteToFront;
+            if (card.gameObject != this.gameObject)
+            {
+                _frontCard = card;
+                _frontCard.cardMoved += OnFrontCardLeft;
+                break;
+            }
         }
     }
 
-    void PromoteToFront()
+    private void OnFrontCardLeft()
     {
-        if (_frontSwipeEffect != null)
+        if (_frontCard != null)
         {
-            _frontSwipeEffect.cardMoved -= PromoteToFront;
+            _frontCard.cardMoved -= OnFrontCardLeft;
+            _frontCard = null;
         }
 
-        transform.localScale = _targetBaseScale;
-        gameObject.AddComponent<SwipeEffect>();
+        StartCoroutine(SmoothScaleUpAndPromote());
+    }
+
+    private IEnumerator SmoothScaleUpAndPromote()
+    {
+        Vector3 startScale = transform.localScale;
+        float time = 0f;
+        float duration = 0.25f;
+
+        while (time < duration)
+        {
+            time += Time.deltaTime;
+            float t = Mathf.SmoothStep(0f, 1f, time / duration);
+            transform.localScale = Vector3.Lerp(startScale, _maxScale, t);
+            yield return null;
+        }
+
+        transform.localScale = _maxScale;
+
+        // Upgrade to FirstCard
+        if (GetComponent<FirstCard>() == null)
+        {
+            gameObject.AddComponent<FirstCard>();
+        }
+
         Destroy(this);
     }
 
     void OnDestroy()
     {
-        if (_frontSwipeEffect != null)
+        if (_frontCard != null)
         {
-            _frontSwipeEffect.cardMoved -= PromoteToFront;
+            _frontCard.cardMoved -= OnFrontCardLeft;
         }
     }
 }

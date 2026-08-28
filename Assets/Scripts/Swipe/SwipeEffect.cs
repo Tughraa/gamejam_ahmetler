@@ -12,6 +12,12 @@ public class SwipeEffect : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
     private float _distanceMoved;
     private bool _swipeLeft;
 
+    [Header("Details Scroll Settings")]
+    public RectTransform contentHolder;
+    public float maxScrollUpDistance = 340f;
+    private float _currentScrollY = 0f;
+    private bool _isDraggingVertical = false;
+
     public event Action cardMoved;
 
     void Awake()
@@ -19,15 +25,39 @@ public class SwipeEffect : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
         _rectTransform = GetComponent<RectTransform>();
         _image = GetComponent<Image>();
         transform.localScale = Vector3.one;
+
+        if (contentHolder == null)
+        {
+            Transform t = transform.Find("ContentHolder");
+            if (t != null) contentHolder = t.GetComponent<RectTransform>();
+        }
     }
 
     public void OnBeginDrag(PointerEventData pointerEventData)
     {
         _initialPosition = _rectTransform.anchoredPosition;
+        _isDraggingVertical = false;
     }
 
     public void OnDrag(PointerEventData pointerEventData)
     {
+        Vector2 totalDelta = pointerEventData.position - pointerEventData.pressPosition;
+
+        // Determine if the player wants to scroll details or swipe the card
+        if (!_isDraggingVertical && Mathf.Abs(totalDelta.y) > Mathf.Abs(totalDelta.x) && Mathf.Abs(totalDelta.y) > 20f)
+        {
+            _isDraggingVertical = true;
+        }
+
+        // 1. VERTICAL SCROLL (Details View)
+        if (_isDraggingVertical && contentHolder != null)
+        {
+            _currentScrollY = Mathf.Clamp(_currentScrollY + pointerEventData.delta.y, 0f, maxScrollUpDistance);
+            contentHolder.anchoredPosition = new Vector2(contentHolder.anchoredPosition.x, _currentScrollY);
+            return;
+        }
+
+        // 2. HORIZONTAL SWIPE
         _rectTransform.anchoredPosition += new Vector2(pointerEventData.delta.x, 0);
 
         float dragOffset = _rectTransform.anchoredPosition.x - _initialPosition.x;
@@ -41,10 +71,17 @@ public class SwipeEffect : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
 
     public void OnEndDrag(PointerEventData pointerEventData)
     {
+        if (_isDraggingVertical)
+        {
+            _isDraggingVertical = false;
+            return;
+        }
+
         _distanceMoved = Mathf.Abs(_rectTransform.anchoredPosition.x - _initialPosition.x);
 
         if (_distanceMoved < 0.2f * Screen.width)
         {
+            // Snap back horizontally
             _rectTransform.anchoredPosition = _initialPosition;
             _rectTransform.localEulerAngles = Vector3.zero;
         }
@@ -53,7 +90,6 @@ public class SwipeEffect : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
             _swipeLeft = (_rectTransform.anchoredPosition.x < _initialPosition.x);
             cardMoved?.Invoke();
 
-            // Right swipe = test match trigger
             if (!_swipeLeft)
             {
                 HandleLikeSwipe();
@@ -73,13 +109,7 @@ public class SwipeEffect : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
 
             if (isMatch)
             {
-                // Open match overlay and pass data
                 ScreenManager.Instance?.OpenMatchScreen();
-                Debug.Log($"Matched with {display.horseData.horseName}! ({matchPercent * 100}%)");
-            }
-            else
-            {
-                Debug.Log($"Passed threshold check on {display.horseData.horseName}: No match ({matchPercent * 100}%).");
             }
         }
     }
