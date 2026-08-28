@@ -112,17 +112,22 @@ public class DialogueManager : MonoBehaviour
     public void NewBox(string inText, bool right)
     {
         GameObject newBox = Instantiate(optBoxFab, contentRect);
-        newBox.transform.GetChild(0).GetComponent<TMP_Text>().text = inText;
 
-        float xOffs = right ? rBoxPos : lBoxPos;
-        newBox.transform.localPosition = new Vector3(xOffs+700f, 0f, 0f);
+        float anchor = right ? rBoxPos : lBoxPos;
+        newBox.GetComponent<BoxPopUp>().Setup(inText, anchor);
 
-        int ite = contentRect.childCount;
+        // Stack boxes by accumulating real heights
+        float currentY = yOrigin;
         foreach (Transform boxChild in contentRect)
         {
-            float offPos = yOrigin + boxOffset * ite;
-            boxChild.localPosition = new Vector3(boxChild.localPosition.x, offPos, 0f);
-            ite--;
+            RectTransform childRect = boxChild.GetComponent<RectTransform>();
+            currentY += childRect.sizeDelta.y + boxOffset;
+        }
+        foreach (Transform boxChild in contentRect)
+        {
+            RectTransform childRect = boxChild.GetComponent<RectTransform>();
+            boxChild.localPosition = new Vector3(boxChild.localPosition.x, currentY, 0f);
+            currentY -= childRect.sizeDelta.y + boxOffset;
         }
     }
     IEnumerator OptionRoutine(DialogueNode next)
