@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class FirstCard : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
     private RectTransform _rectTransform;
-    private Image _image;
     private Canvas _rootCanvas;
     private Vector2 _initialPosition;
     private float _distanceMoved;
@@ -15,24 +14,21 @@ public class FirstCard : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDra
 
     [Header("Details Scroll Settings")]
     public RectTransform contentHolder;
-    public float maxScrollUpDistance = 340f;
-    [Tooltip("Adjust scroll sensitivity for low-res pixel canvases (0.5 - 1.0 is standard)")]
+    public float maxScrollUpDistance = 350f;
     public float scrollSensitivity = 1.0f;
-    [Tooltip("Smoothing speed for details scrolling")]
-    public float scrollSmoothSpeed = 15f;
+    public float scrollSmoothSpeed = 20f;
 
+    private float _initialContentY = 0f;
     private float _targetScrollY = 0f;
     private float _currentScrollY = 0f;
     private bool _isDraggingVertical = false;
 
     public float NormalizedDragProgress { get; private set; }
-
     public event Action cardMoved;
 
     void Awake()
     {
         _rectTransform = GetComponent<RectTransform>();
-        _image = GetComponent<Image>();
         _rootCanvas = GetComponentInParent<Canvas>();
         _initialPosition = _rectTransform.anchoredPosition;
 
@@ -44,14 +40,15 @@ public class FirstCard : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDra
 
         if (contentHolder != null)
         {
-            _targetScrollY = contentHolder.anchoredPosition.y;
-            _currentScrollY = _targetScrollY;
+            // Record where ContentHolder sits in the prefab editor as its absolute top resting place
+            _initialContentY = contentHolder.anchoredPosition.y;
+            _targetScrollY = _initialContentY;
+            _currentScrollY = _initialContentY;
         }
     }
 
     void Update()
     {
-        // Smoothly interpolate vertical scrolling
         if (contentHolder != null)
         {
             _currentScrollY = Mathf.Lerp(_currentScrollY, _targetScrollY, Time.deltaTime * scrollSmoothSpeed);
@@ -61,20 +58,12 @@ public class FirstCard : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDra
 
     public void OnBeginDrag(PointerEventData pointerEventData)
     {
-        // If we are currently scrolled down viewing details, default directly to vertical scrolling
-        if (_targetScrollY > 5f)
-        {
-            _isDraggingVertical = true;
-        }
-        else
-        {
-            _isDraggingVertical = false;
-        }
+        _isDraggingVertical = (_targetScrollY > _initialContentY + 5f);
 
         if (contentHolder != null)
         {
-            _targetScrollY = contentHolder.anchoredPosition.y;
-            _currentScrollY = _targetScrollY;
+            _currentScrollY = contentHolder.anchoredPosition.y;
+            _targetScrollY = _currentScrollY;
         }
     }
 
@@ -82,29 +71,27 @@ public class FirstCard : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDra
     {
         Vector2 totalDelta = pointerEventData.position - pointerEventData.pressPosition;
 
-        // Detect vertical intent if not already locked in
         if (!_isDraggingVertical)
         {
-            // If dragging vertically more than horizontally, switch to vertical scroll
             if (Mathf.Abs(totalDelta.y) > Mathf.Abs(totalDelta.x) && Mathf.Abs(totalDelta.y) > 10f)
             {
                 _isDraggingVertical = true;
             }
         }
 
-        // 1. VERTICAL SCROLL (Works both UP to view details and DOWN to return to profile photo)
+        // 1. VERTICAL SCROLL
         if (_isDraggingVertical && contentHolder != null)
         {
             float canvasScale = _rootCanvas != null ? _rootCanvas.scaleFactor : 1f;
-            float scaledDeltaY = (pointerEventData.delta.y / canvasScale) * scrollSensitivity;
+            float step = (pointerEventData.delta.y / canvasScale) * scrollSensitivity;
 
-            // Clamps smoothly between 0 (Top / Profile Photo) and maxScrollUpDistance (Bottom / Details)
-            _targetScrollY = Mathf.Clamp(_targetScrollY + scaledDeltaY, 0f, maxScrollUpDistance);
+            // Clamps between its initial top resting position and max scroll distance
+            _targetScrollY = Mathf.Clamp(_targetScrollY + step, _initialContentY, _initialContentY + maxScrollUpDistance);
             return;
         }
 
-        // 2. HORIZONTAL SWIPE (Only allowed when viewing the top profile photo)
-        if (_targetScrollY <= 5f)
+        // 2. HORIZONTAL SWIPE
+        if (_targetScrollY <= _initialContentY + 5f)
         {
             _rectTransform.anchoredPosition += new Vector2(pointerEventData.delta.x, 0);
 
@@ -123,6 +110,11 @@ public class FirstCard : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDra
         if (_isDraggingVertical)
         {
             _isDraggingVertical = false;
+
+            if (_targetScrollY < _initialContentY + 25f)
+            {
+                _targetScrollY = _initialContentY;
+            }
             return;
         }
 
@@ -167,7 +159,8 @@ public class FirstCard : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDra
 
     private IEnumerator MovedCard()
     {
-        if (_image != null) _image.raycastTarget = false;
+        Image rootImage = GetComponent<Image>();
+        if (rootImage != null) rootImage.raycastTarget = false;
 
         float time = 0f;
         float duration = 0.3f;
@@ -176,19 +169,11 @@ public class FirstCard : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDra
         float targetX = _swipeLeft ? startPos.x - Screen.width : startPos.x + Screen.width;
         Vector2 targetPos = new Vector2(targetX, startPos.y);
 
-        Color startColor = _image != null ? _image.color : Color.white;
-
         while (time < duration)
         {
             time += Time.deltaTime;
-            float t = Mathf.Clamp01(time / duration);
-            float smoothT = Mathf.SmoothStep(0f, 1f, t);
-
-            _rectTransform.anchoredPosition = Vector2.Lerp(startPos, targetPos, smoothT);
-
-            if (_image != null)
-                _image.color = new Color(startColor.r, startColor.g, startColor.b, Mathf.Lerp(1f, 0f, smoothT));
-
+            float t = Mathf.SmoothStep(0f, 1f, time / duration);
+            _rectTransform.anchoredPosition = Vector2.Lerp(startPos, targetPos, t);
             yield return null;
         }
 

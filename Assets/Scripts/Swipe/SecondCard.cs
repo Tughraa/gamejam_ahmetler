@@ -7,6 +7,10 @@ public class SecondCard : MonoBehaviour
     private readonly Vector3 _minScale = Vector3.one * 0.8f;
     private readonly Vector3 _maxScale = Vector3.one;
 
+    [Header("Details Scroll Settings to Pass to FirstCard")]
+    [Tooltip("Keep this equal to the maxScrollUpDistance on FirstCard")]
+    public float maxScrollUpDistance = 480f; // Set this high enough for Photo3
+
     void Start()
     {
         transform.localScale = _minScale;
@@ -21,7 +25,6 @@ public class SecondCard : MonoBehaviour
             return;
         }
 
-        // Smoothly follow the front card's drag progress
         transform.localScale = Vector3.Lerp(_minScale, _maxScale, _frontCard.NormalizedDragProgress);
     }
 
@@ -66,11 +69,13 @@ public class SecondCard : MonoBehaviour
 
         transform.localScale = _maxScale;
 
-        // Upgrade to FirstCard
-        if (GetComponent<FirstCard>() == null)
+        // Upgrade to FirstCard and pass the scroll distance
+        FirstCard newFirst = GetComponent<FirstCard>();
+        if (newFirst == null)
         {
-            gameObject.AddComponent<FirstCard>();
+            newFirst = gameObject.AddComponent<FirstCard>();
         }
+        newFirst.maxScrollUpDistance = maxScrollUpDistance;
 
         Destroy(this);
     }

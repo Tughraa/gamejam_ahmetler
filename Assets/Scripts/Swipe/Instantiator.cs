@@ -11,8 +11,10 @@ public class Instantiator : MonoBehaviour
 
     void Start()
     {
+        // Find all CardDisplay components on the starting cards in the container
         CardDisplay[] startingCards = GetComponentsInChildren<CardDisplay>();
 
+        // Unity UI order: Last child is the front card (index 0 in deck), first child is back card (index 1)
         for (int i = startingCards.Length - 1; i >= 0; i--)
         {
             if (_currentCardIndex < horseDeck.Count)
