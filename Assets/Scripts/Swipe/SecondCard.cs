@@ -10,6 +10,9 @@ public class SecondCard : MonoBehaviour
     [Header("Details Scroll Settings to Pass to FirstCard")]
     [Tooltip("Keep this equal to the maxScrollUpDistance on FirstCard")]
     public float maxScrollUpDistance = 480f; // Set this high enough for Photo3
+    
+    [Header("Other Effects")]
+    public AudioClip swipeSoundFX;
 
     void Start()
     {
@@ -33,6 +36,7 @@ public class SecondCard : MonoBehaviour
         FirstCard[] activeCards = FindObjectsOfType<FirstCard>();
         foreach (FirstCard card in activeCards)
         {
+            card.swipeSoundFX = swipeSoundFX;
             if (card.gameObject != this.gameObject)
             {
                 _frontCard = card;
@@ -74,6 +78,7 @@ public class SecondCard : MonoBehaviour
         if (newFirst == null)
         {
             newFirst = gameObject.AddComponent<FirstCard>();
+            newFirst.swipeSoundFX = swipeSoundFX;
         }
         newFirst.maxScrollUpDistance = maxScrollUpDistance;
 

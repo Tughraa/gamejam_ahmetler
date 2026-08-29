@@ -2669,7 +2669,7 @@ MonoBehaviour:
   horse: {fileID: 11400000, guid: 3ec9667fa0706f94eb194edeb5a4e739, type: 2}
   optButton1: {fileID: 1273763428}
   optButton2: {fileID: 793200264}
-  dialogueGraph: {fileID: 11400000, guid: 78f50af440dda0542b448e5f37559d1f, type: 2}
+  dialogueGraph: {fileID: 11400000, guid: 0cef325d696491e479bff705baa1eb23, type: 2}
   talkText: {fileID: 1786589574}
   typingSpeed: 0.05
   endScreen: {fileID: 1824927591}

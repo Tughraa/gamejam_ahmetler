@@ -3,7 +3,9 @@ guid: a71a80142c3864f49b49948c40614030
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - contentHolder: {instanceID: 0}
+  - swipeSoundFX: {fileID: 8300000, guid: d8269dbbb2cabde4e969fc330f4ebd1e, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

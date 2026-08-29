@@ -89,6 +89,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81b12d1f567a74d4cb0fd262d3e39be6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxScrollUpDistance: 480
+  swipeSoundFX: {fileID: 8300000, guid: d8269dbbb2cabde4e969fc330f4ebd1e, type: 3}
 --- !u!114 &7606598559831363468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,6 +103,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45475178f7b82e34f933503910a284c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardImage: {fileID: 0}
+  mainImage: {fileID: 0}
   nameText: {fileID: 0}
+  bioText: {fileID: 0}
+  photo2Image: {fileID: 0}
+  photo3Image: {fileID: 0}
+  funnyAnswer1Text: {fileID: 0}
+  funnyAnswer2Text: {fileID: 0}
   horseData: {fileID: 0}

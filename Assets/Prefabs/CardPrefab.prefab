@@ -697,6 +697,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxScrollUpDistance: 480
+  swipeSoundFX: {fileID: 8300000, guid: d8269dbbb2cabde4e969fc330f4ebd1e, type: 3}
 --- !u!114 &5567952604643405838
 MonoBehaviour:
   m_ObjectHideFlags: 0

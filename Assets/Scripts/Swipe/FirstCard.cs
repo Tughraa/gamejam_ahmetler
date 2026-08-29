@@ -29,6 +29,8 @@ public class FirstCard : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDra
     public float NormalizedDragProgress { get; private set; }
     public event Action cardMoved;
 
+    public AudioClip swipeSoundFX;
+
     void Awake()
     {
         _rectTransform = GetComponent<RectTransform>();
@@ -60,6 +62,7 @@ public class FirstCard : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDra
 
     public void OnBeginDrag(PointerEventData pointerEventData)
     {
+        Debug.Log("began draggin, yeag");
         _currentDragDirection = DragDirection.None;
 
         // If already scrolled into details, lock directly to vertical scrolling
@@ -126,6 +129,8 @@ public class FirstCard : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDra
 
     public void OnEndDrag(PointerEventData pointerEventData)
     {
+        
+        SoundManager.instance.PlaySoundEffect(swipeSoundFX,0.85f);
         if (_currentDragDirection == DragDirection.Vertical)
         {
             _currentDragDirection = DragDirection.None;
