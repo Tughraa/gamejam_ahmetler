@@ -3843,7 +3843,7 @@ MonoBehaviour:
   opt1: {fileID: 0}
   opt2: {fileID: 0}
   flirtLine: i run for some piece like you  :)
-  ourLine: i tought you don't like running
+  ourLine: i thought you don't like running
   goodEnd: 0
 --- !u!114 &5849808686428996794
 MonoBehaviour:
