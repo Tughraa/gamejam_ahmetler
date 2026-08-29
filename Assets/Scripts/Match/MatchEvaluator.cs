@@ -2,30 +2,40 @@ using UnityEngine;
 
 public static class MatchEvaluator
 {
-    // Minimum percentage (e.g., 0.6f = 60% agreement) to trigger a match
-    public const float DEFAULT_THRESHOLD = 0.1f;
+    private const float MIN_MATCH_PERCENT = 0.6f;
 
-    public static bool EvaluateMatch(HorseData horse, bool[] playerAnswers, out float matchPercentage, float threshold = DEFAULT_THRESHOLD)
+    public static bool EvaluateMatch(HorseData targetHorse, HorseData playerProfile, out float matchPercent)
     {
-        if (horse == null || horse.answers == null || playerAnswers == null || horse.answers.Length == 0)
+        matchPercent = 0f;
+
+        // 1. Strict Gate: Is this horse matchable?
+        if (targetHorse == null || !targetHorse.matchable)
         {
-            matchPercentage = 0f;
             return false;
         }
 
-        int totalQuestions = Mathf.Min(horse.answers.Length, playerAnswers.Length);
-        int agreementCount = 0;
+        // 2. If either profile lacks answer data, treat as an instant match
+        if (playerProfile == null || playerProfile.answers == null ||
+            targetHorse.answers == null || targetHorse.answers.Length == 0)
+        {
+            matchPercent = 1.0f;
+            return true;
+        }
 
+        // 3. Compare question answers
+        int totalQuestions = Mathf.Min(playerProfile.answers.Length, targetHorse.answers.Length);
+        if (totalQuestions == 0) return true;
+
+        int sharedAnswers = 0;
         for (int i = 0; i < totalQuestions; i++)
         {
-            // Both answered True or both answered False
-            if (horse.answers[i] == playerAnswers[i])
+            if (playerProfile.answers[i] == targetHorse.answers[i])
             {
-                agreementCount++;
+                sharedAnswers++;
             }
         }
 
-        matchPercentage = (float)agreementCount / totalQuestions;
-        return matchPercentage >= threshold;
+        matchPercent = (float)sharedAnswers / totalQuestions;
+        return matchPercent >= MIN_MATCH_PERCENT;
     }
 }

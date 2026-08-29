@@ -102,15 +102,20 @@ public class SwipeEffect : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
     private void HandleLikeSwipe()
     {
         CardDisplay display = GetComponent<CardDisplay>();
-        if (display != null && display.horseData != null && PlayerData.Instance != null)
-        {
-            bool[] playerAnswers = PlayerData.Instance.playerAnswers;
-            bool isMatch = MatchEvaluator.EvaluateMatch(display.horseData, playerAnswers, out float matchPercent);
+        if (display == null || display.horseData == null) return;
 
-            if (isMatch)
-            {
-                ScreenManager.Instance?.OpenMatchScreen();
-            }
+        if (!display.horseData.matchable) return;
+
+        // 1. Fetch playerProfile from ScreenManager instead of bool[] array
+        HorseData playerProfile = ScreenManager.Instance != null ? ScreenManager.Instance.playerProfile : null;
+
+        // 2. Pass playerProfile (HorseData) to MatchEvaluator
+        bool isMatch = MatchEvaluator.EvaluateMatch(display.horseData, playerProfile, out float matchPercent);
+
+        if (isMatch)
+        {
+            // 3. Pass display.horseData into OpenMatchScreen
+            ScreenManager.Instance?.OpenMatchScreen(display.horseData);
         }
     }
 

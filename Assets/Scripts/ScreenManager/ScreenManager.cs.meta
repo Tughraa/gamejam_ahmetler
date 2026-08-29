@@ -3,7 +3,13 @@ guid: 96e40cac96a41b74ca2669abad3b99d2
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - swipeCardContainer: {instanceID: 0}
+  - matchPanel: {instanceID: 0}
+  - messagingPanel: {instanceID: 0}
+  - datePanel: {instanceID: 0}
+  - matchScreenUI: {instanceID: 0}
+  - playerProfile: {fileID: 11400000, guid: 8f456557987e5754f9497ebb77930e1b, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

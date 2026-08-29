@@ -21,7 +21,10 @@ public class FirstCard : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDra
     private float _initialContentY = 0f;
     private float _targetScrollY = 0f;
     private float _currentScrollY = 0f;
-    private bool _isDraggingVertical = false;
+
+    // Gesture direction lock
+    private enum DragDirection { None, Horizontal, Vertical }
+    private DragDirection _currentDragDirection = DragDirection.None;
 
     public float NormalizedDragProgress { get; private set; }
     public event Action cardMoved;
@@ -40,7 +43,6 @@ public class FirstCard : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDra
 
         if (contentHolder != null)
         {
-            // Record where ContentHolder sits in the prefab editor as its absolute top resting place
             _initialContentY = contentHolder.anchoredPosition.y;
             _targetScrollY = _initialContentY;
             _currentScrollY = _initialContentY;
@@ -58,7 +60,13 @@ public class FirstCard : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDra
 
     public void OnBeginDrag(PointerEventData pointerEventData)
     {
-        _isDraggingVertical = (_targetScrollY > _initialContentY + 5f);
+        _currentDragDirection = DragDirection.None;
+
+        // If already scrolled into details, lock directly to vertical scrolling
+        if (_targetScrollY > _initialContentY + 5f)
+        {
+            _currentDragDirection = DragDirection.Vertical;
+        }
 
         if (contentHolder != null)
         {
@@ -71,27 +79,38 @@ public class FirstCard : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDra
     {
         Vector2 totalDelta = pointerEventData.position - pointerEventData.pressPosition;
 
-        if (!_isDraggingVertical)
+        // 1. Detect and lock direction once movement passes 10px threshold
+        if (_currentDragDirection == DragDirection.None)
         {
-            if (Mathf.Abs(totalDelta.y) > Mathf.Abs(totalDelta.x) && Mathf.Abs(totalDelta.y) > 10f)
+            if (totalDelta.magnitude > 10f)
             {
-                _isDraggingVertical = true;
+                if (Mathf.Abs(totalDelta.x) > Mathf.Abs(totalDelta.y))
+                {
+                    _currentDragDirection = DragDirection.Horizontal;
+                }
+                else
+                {
+                    _currentDragDirection = DragDirection.Vertical;
+                }
+            }
+            else
+            {
+                return; // Wait until drag intent is determined
             }
         }
 
-        // 1. VERTICAL SCROLL
-        if (_isDraggingVertical && contentHolder != null)
+        // 2. STRICT VERTICAL SCROLL (Details View)
+        if (_currentDragDirection == DragDirection.Vertical && contentHolder != null)
         {
             float canvasScale = _rootCanvas != null ? _rootCanvas.scaleFactor : 1f;
             float step = (pointerEventData.delta.y / canvasScale) * scrollSensitivity;
 
-            // Clamps between its initial top resting position and max scroll distance
             _targetScrollY = Mathf.Clamp(_targetScrollY + step, _initialContentY, _initialContentY + maxScrollUpDistance);
             return;
         }
 
-        // 2. HORIZONTAL SWIPE
-        if (_targetScrollY <= _initialContentY + 5f)
+        // 3. STRICT HORIZONTAL SWIPE (Card Swipe Left/Right)
+        if (_currentDragDirection == DragDirection.Horizontal && _targetScrollY <= _initialContentY + 5f)
         {
             _rectTransform.anchoredPosition += new Vector2(pointerEventData.delta.x, 0);
 
@@ -107,9 +126,9 @@ public class FirstCard : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDra
 
     public void OnEndDrag(PointerEventData pointerEventData)
     {
-        if (_isDraggingVertical)
+        if (_currentDragDirection == DragDirection.Vertical)
         {
-            _isDraggingVertical = false;
+            _currentDragDirection = DragDirection.None;
 
             if (_targetScrollY < _initialContentY + 25f)
             {
@@ -117,6 +136,8 @@ public class FirstCard : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDra
             }
             return;
         }
+
+        _currentDragDirection = DragDirection.None;
 
         _distanceMoved = Mathf.Abs(_rectTransform.anchoredPosition.x - _initialPosition.x);
 
@@ -143,17 +164,18 @@ public class FirstCard : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDra
     private void HandleLikeSwipe()
     {
         CardDisplay display = GetComponent<CardDisplay>();
-        if (display != null && display.horseData != null && PlayerData.Instance != null)
+        if (display == null || display.horseData == null) return;
+
+        // Reject immediately if not marked matchable
+        if (!display.horseData.matchable) return;
+
+        HorseData playerProfile = ScreenManager.Instance != null ? ScreenManager.Instance.playerProfile : null;
+
+        bool isMatch = MatchEvaluator.EvaluateMatch(display.horseData, playerProfile, out float matchPercent);
+
+        if (isMatch)
         {
-            if (!display.horseData.matchable) return;
-
-            bool[] playerAnswers = PlayerData.Instance.playerAnswers;
-            bool isMatch = MatchEvaluator.EvaluateMatch(display.horseData, playerAnswers, out float matchPercent);
-
-            if (isMatch)
-            {
-                ScreenManager.Instance?.OpenMatchScreen();
-            }
+            ScreenManager.Instance?.OpenMatchScreen(display.horseData);
         }
     }
 
