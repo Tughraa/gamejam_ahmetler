@@ -23,7 +23,7 @@ public class DialogueManager : MonoBehaviour
 
     private DialogueNode currentNode;
 
-    bool isOver = false;
+    public AudioClip clickSound;
 
     void Start()
     {
@@ -51,8 +51,8 @@ public class DialogueManager : MonoBehaviour
     }
     public void OpenMessageTab()
     {
+        SoundManager.instance.PlaySoundEffect(clickSound,0.7f);
         messagesManager.ChangeTab(this.gameObject);
-        Debug.Log(messagesManager);
     }
 
     private void LoadNode(DialogueNode node)
@@ -91,7 +91,6 @@ public class DialogueManager : MonoBehaviour
     }
     public void EndDialogue(bool good)
     {
-        isOver = true;
         if (good)
         {
             askOutButton.gameObject.SetActive(true);
@@ -106,6 +105,7 @@ public class DialogueManager : MonoBehaviour
 
     private void SelectOption(DialogueNode next)
     {
+        SoundManager.instance.PlaySoundEffect(clickSound,0.7f);
         StartCoroutine(OptionRoutine(next));
     }
 

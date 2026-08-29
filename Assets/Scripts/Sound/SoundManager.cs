@@ -14,10 +14,10 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    public void PlaySoundEffect(AudioClip[] audioClips,Vector3 audioLocation,float volume)
+    public void PlaySoundEffect(AudioClip audioClip,float volume)
     {
-        AudioClip audioClip = audioClips[Random.Range(0,audioClips.Length)];
-        AudioSource audioSource = Instantiate(audioPrefab,audioLocation,Quaternion.identity);
+        //AudioClip audioClip = audioClips[Random.Range(0,audioClips.Length)];
+        AudioSource audioSource = Instantiate(audioPrefab,new Vector3(0f,0f,0f),Quaternion.identity);
         audioSource.clip = audioClip;
         audioSource.volume = volume;
         audioSource.Play();
