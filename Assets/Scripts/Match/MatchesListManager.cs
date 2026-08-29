@@ -5,12 +5,17 @@ public class MatchesListManager : MonoBehaviour
 {
     public static MatchesListManager Instance { get; private set; }
 
-    [Header("UI references")]
-    public Transform leftScreenContainer; // Drag Canvas/ApplicationUI/LeftScreen here
-    public GameObject matchItemPrefab;   // Drag MatchedHorseItemPrefab here
+    [Header("Match Cap Settings")]
+    public int maxMatches = 6;
 
-    // Saved list of matches
+    [Header("UI references")]
+    public Transform leftScreenContainer;
+    public GameObject matchItemPrefab;
+
     private readonly List<HorseData> _matchedHorses = new List<HorseData>();
+
+    // Helper to check if maximum limit has been reached
+    public bool HasReachedMaxMatches => _matchedHorses.Count >= maxMatches;
 
     void Awake()
     {
@@ -22,12 +27,11 @@ public class MatchesListManager : MonoBehaviour
     {
         if (horse == null) return;
 
-        // Prevent duplicate entries
-        if (_matchedHorses.Contains(horse)) return;
+        // Strict limit: reject if already at 6 matches or already in the list
+        if (HasReachedMaxMatches || _matchedHorses.Contains(horse)) return;
 
         _matchedHorses.Add(horse);
 
-        // Spawn a banner icon in LeftScreen
         if (matchItemPrefab != null && leftScreenContainer != null)
         {
             GameObject newItem = Instantiate(matchItemPrefab, leftScreenContainer);

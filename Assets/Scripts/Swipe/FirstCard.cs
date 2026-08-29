@@ -166,8 +166,13 @@ public class FirstCard : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDra
         CardDisplay display = GetComponent<CardDisplay>();
         if (display == null || display.horseData == null) return;
 
-        // Reject immediately if not marked matchable
         if (!display.horseData.matchable) return;
+
+        // If 6 matches are already made, do not evaluate or trigger a match screen
+        if (MatchesListManager.Instance != null && MatchesListManager.Instance.HasReachedMaxMatches)
+        {
+            return;
+        }
 
         HorseData playerProfile = ScreenManager.Instance != null ? ScreenManager.Instance.playerProfile : null;
 
