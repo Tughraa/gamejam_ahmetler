@@ -18,6 +18,8 @@ public class DateManager : MonoBehaviour
     private Coroutine typingCoroutine;
     public float typingSpeed = 0.05f; // seconds per character
 
+    public EndScreen endScreen;
+
     void Start()
     {
         foreach (XNode.Node node in dialogueGraph.nodes)
@@ -98,13 +100,14 @@ public class DateManager : MonoBehaviour
     {
         optButton1.gameObject.SetActive(false);
         optButton2.gameObject.SetActive(false);
+        endScreen.gameObject.SetActive(true);
         if (good)
         {
-
+            endScreen.TriggerEnding("Date went well!");
         }
         else
         {
-            
+            endScreen.TriggerEnding("You became a really nice horse-stew...");
         }
     }
 

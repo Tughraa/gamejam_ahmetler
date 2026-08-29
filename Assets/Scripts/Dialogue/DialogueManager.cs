@@ -24,6 +24,7 @@ public class DialogueManager : MonoBehaviour
     private DialogueNode currentNode;
 
     public AudioClip clickSound;
+    public AudioClip popSound;
 
     void Start()
     {
@@ -77,7 +78,7 @@ public class DialogueManager : MonoBehaviour
             optButton1.onClick.AddListener(() => SelectOption(next1));
         }
 
-        if (hasOpt2)        //myButton.interactable = false;
+        if (hasOpt2)
         {
             DialogueNode next2 = port2.Connection.node as DialogueNode;
             optButton2.transform.GetChild(0).GetComponent<TMP_Text>().text = next2.ourLine;
@@ -112,6 +113,7 @@ public class DialogueManager : MonoBehaviour
     public void NewBox(string inText, bool right)
     {
         GameObject newBox = Instantiate(optBoxFab, contentRect);
+        SoundManager.instance.PlaySoundEffect(popSound,0.85f);
 
         float anchor = right ? rBoxPos : lBoxPos;
         newBox.GetComponent<BoxPopUp>().Setup(inText, anchor);
