@@ -627,6 +627,8 @@ MonoBehaviour:
   matchTitleText: {fileID: 1961576946}
   keepSwipingButton: {fileID: 1657411617}
   goToMessagesButton: {fileID: 675662969}
+  buttonClickSoundFX: {fileID: 8300000, guid: a88a916ee474154408d5683cd95c73c6, type: 3}
+  matchedSoundFX: {fileID: 8300000, guid: 6e148b0b053aae14e922302d6d6baba3, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

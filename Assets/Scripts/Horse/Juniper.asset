@@ -21,6 +21,6 @@ MonoBehaviour:
   funnyAnswer1: 
   funnyAnswer2: 
   matchable: 1
-  textDialogue: {fileID: 0}
-  dateDialogue: {fileID: 0}
+  textDialogue: {fileID: 11400000, guid: 26e039a0bc539ce48913f1e237fbe988, type: 2}
+  dateDialogue: {fileID: 11400000, guid: b15acaaaf016f2f4e8c5011d7e743c8e, type: 2}
   answers: 01000001000001000001000100000100000100000100000100000100010000010000010100000000

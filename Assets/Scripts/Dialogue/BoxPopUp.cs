@@ -16,7 +16,8 @@ public class BoxPopUp : MonoBehaviour
     private TMP_Text tmp;
 
     public float maxWidth = 600f;
-    public float padding = 20f;
+    public float paddingX = 0.2f;
+    public float paddingY = 1f;
 
     void Awake()
     {
@@ -35,26 +36,21 @@ public class BoxPopUp : MonoBehaviour
     tmp.text = text;
     tmp.enableWordWrapping = true;
 
-    // First pass: unconstrained to get natural width
     Vector2 preferred = tmp.GetPreferredValues(text, Mathf.Infinity, Mathf.Infinity);
 
-    float targetWidth = Mathf.Min(preferred.x + padding, maxWidth);
+    float targetWidth = Mathf.Min(preferred.x + paddingX * 2f, maxWidth);
 
-    // Set TMP child width FIRST so it wraps correctly
     RectTransform tmpRect = tmp.GetComponent<RectTransform>();
-    tmpRect.sizeDelta = new Vector2(targetWidth - padding, 0f);
+    tmpRect.sizeDelta = new Vector2(targetWidth - paddingX * 2f, 0f);
 
-    // Second pass: now get height with the constrained width
-    float targetHeight = tmp.GetPreferredValues(text, targetWidth - padding, Mathf.Infinity).y + padding;
+    float targetHeight = tmp.GetPreferredValues(text, targetWidth - paddingX * 2f, Mathf.Infinity).y + paddingY * 2f;
 
-    // Now set both rects with final values
     rect.sizeDelta = new Vector2(targetWidth, targetHeight);
-    tmpRect.sizeDelta = new Vector2(targetWidth - padding, targetHeight - padding);
+    tmpRect.sizeDelta = new Vector2(targetWidth - paddingX * 2f, targetHeight - paddingY * 2f);
 
-    // Offset from anchor inward by half width
     float halfWidth = targetWidth / 2f;
     float xPos = xAnchor - halfWidth * Mathf.Sign(xAnchor);
-    rect.localPosition = new Vector3(xPos+700f, rect.localPosition.y, 0f);
+    rect.localPosition = new Vector3(xPos+300f, rect.localPosition.y, 0f);
 }
 
     void Update()

@@ -15,8 +15,10 @@ MonoBehaviour:
   horseName: Aurora
   horseSprite: {fileID: 21300000, guid: 28c2f0b3d802727469b4ec1ad853729a, type: 3}
   horsePictures: []
-  matchable: 1
   bio: 
-  textDialogue: {fileID: 0}
-  dateDialogue: {fileID: 0}
+  funnyAnswer1: 
+  funnyAnswer2: 
+  matchable: 1
+  textDialogue: {fileID: 11400000, guid: 8f3b9a7446b356c4dad2cfa246fb3411, type: 2}
+  dateDialogue: {fileID: 11400000, guid: 0cef325d696491e479bff705baa1eb23, type: 2}
   answers: 01010100000001000100000100000000010000010101000000000100010100010100000000000000

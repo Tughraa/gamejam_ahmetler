@@ -46,9 +46,13 @@ public class DialogueManager : MonoBehaviour
     public void UpdateHorseData(HorseData data)
     {
         horse = data;
-        //dialogueGraph = data.textDialogue;
+        dialogueGraph = data.textDialogue;
         myButton.transform.GetChild(0).GetComponent<TMP_Text>().text = data.horseName;
         myButton.transform.GetChild(1).GetComponent<Image>().sprite = data.horseSprite;
+
+        
+            myButton.onClick.RemoveAllListeners();
+            myButton.onClick.AddListener(() => OpenMessageTab());
     }
     public void OpenMessageTab()
     {
