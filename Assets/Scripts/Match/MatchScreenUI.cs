@@ -15,6 +15,10 @@ public class MatchScreenUI : MonoBehaviour
 
     private HorseData _currentMatchedHorse;
 
+    [Header("Sound Effects")]
+    public AudioClip buttonClickSoundFX;
+    public AudioClip matchedSoundFX;
+
     void Awake()
     {
         if (keepSwipingButton != null)
@@ -26,6 +30,7 @@ public class MatchScreenUI : MonoBehaviour
 
     public void SetupMatchScreen(HorseData matchedHorse, HorseData playerProfile)
     {
+        SoundManager.instance.PlaySoundEffect(matchedSoundFX,0.85f);
         _currentMatchedHorse = matchedHorse;
 
         // 1. Immediately save this match into our permanent list
@@ -49,11 +54,13 @@ public class MatchScreenUI : MonoBehaviour
     private void OnKeepSwipingClicked()
     {
         // Just hide the modal so the player can keep swiping cards
+        SoundManager.instance.PlaySoundEffect(buttonClickSoundFX,0.7f);
         gameObject.SetActive(false);
     }
 
     private void OnGoToMessagesClicked()
     {
+        SoundManager.instance.PlaySoundEffect(buttonClickSoundFX,0.7f);
         gameObject.SetActive(false);
         ScreenManager.Instance?.OpenMessengerScreenWithHorse(_currentMatchedHorse);
     }

@@ -11,6 +11,9 @@ public class MatchedHorseItem : MonoBehaviour
 
     private HorseData _horseData;
 
+    [Header("Sound Effects")]
+    public AudioClip clickSound;
+
     public void Setup(HorseData data)
     {
         _horseData = data;
@@ -39,6 +42,7 @@ public class MatchedHorseItem : MonoBehaviour
 
     private void OnClickItem()
     {
+        SoundManager.instance.PlaySoundEffect(clickSound,0.7f);
         ScreenManager.Instance?.OpenMessengerScreenWithHorse(_horseData);
     }
 }
