@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Big Chief
   m_EditorClassIdentifier: 
   horseName: Big Chief
-  horseSprite: {fileID: 0}
-  horsePictures: []
+  horseSprite: {fileID: 3856080718836748588, guid: add08bf1bf4e6c54da786baa33beb87d, type: 3}
+  horsePictures:
+  - {fileID: 2951628818514760999, guid: 2bfab7fb897f60c4f8f1b5a8c58ee3f2, type: 3}
   bio: You know who I am, my swag, and my game
   funnyAnswer1: 
   funnyAnswer2: 

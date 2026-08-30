@@ -1,123 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-6491040011004606803
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a086981b227a3d438cdd044903c10cd, type: 3}
-  m_Name: Dialogue
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 3720, y: 456}
-  ports:
-    keys:
-    - entry
-    - opt1
-    - opt2
-    values:
-    - _fieldName: entry
-      _node: {fileID: -6491040011004606803}
-      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: opt1
-        node: {fileID: 3666574728359644390}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: opt1
-      _node: {fileID: -6491040011004606803}
-      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: opt2
-      _node: {fileID: -6491040011004606803}
-      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  entry: {fileID: 0}
-  opt1: {fileID: 0}
-  opt2: {fileID: 0}
-  flirtLine: "ka\xE7anzi"
-  ourLine: 
-  goodEnd: 1
---- !u!114 &-5651849883539822671
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a086981b227a3d438cdd044903c10cd, type: 3}
-  m_Name: Dialogue
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 3288, y: -408}
-  ports:
-    keys:
-    - entry
-    - opt1
-    - opt2
-    values:
-    - _fieldName: entry
-      _node: {fileID: -5651849883539822671}
-      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: opt1
-        node: {fileID: 1327004173800713561}
-        reroutePoints: []
-      - fieldName: opt1
-        node: {fileID: 3899242380070445484}
-        reroutePoints: []
-      - fieldName: opt1
-        node: {fileID: 6182110296427211483}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: opt1
-      _node: {fileID: -5651849883539822671}
-      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: opt2
-      _node: {fileID: -5651849883539822671}
-      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  entry: {fileID: 0}
-  opt1: {fileID: 0}
-  opt2: {fileID: 0}
-  flirtLine: tarikat yahnisi
-  ourLine: 
-  goodEnd: 0
 --- !u!114 &-5306067894662810668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -648,7 +530,6 @@ MonoBehaviour:
   - {fileID: 2109271533610621282}
   - {fileID: 2240034347370828506}
   - {fileID: 1327004173800713561}
-  - {fileID: -5651849883539822671}
   - {fileID: 3899242380070445484}
   - {fileID: 7852076871842846341}
   - {fileID: -464679629467163456}
@@ -656,7 +537,6 @@ MonoBehaviour:
   - {fileID: -4376444478184788057}
   - {fileID: 3666574728359644390}
   - {fileID: 6182110296427211483}
-  - {fileID: -6491040011004606803}
 --- !u!114 &1327004173800713561
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -696,10 +576,7 @@ MonoBehaviour:
       _node: {fileID: 1327004173800713561}
       _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections:
-      - fieldName: entry
-        node: {fileID: -5651849883539822671}
-        reroutePoints: []
+      connections: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -888,10 +765,7 @@ MonoBehaviour:
       _node: {fileID: 3666574728359644390}
       _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections:
-      - fieldName: entry
-        node: {fileID: -6491040011004606803}
-        reroutePoints: []
+      connections: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -910,7 +784,7 @@ MonoBehaviour:
   opt2: {fileID: 0}
   flirtLine: you're a donkey in a horse's body...
   ourLine: i'm not mentally strong enough to use psychedelics... (leave)
-  goodEnd: 0
+  goodEnd: 1
 --- !u!114 &3899242380070445484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -950,10 +824,7 @@ MonoBehaviour:
       _node: {fileID: 3899242380070445484}
       _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections:
-      - fieldName: entry
-        node: {fileID: -5651849883539822671}
-        reroutePoints: []
+      connections: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -1074,10 +945,7 @@ MonoBehaviour:
       _node: {fileID: 6182110296427211483}
       _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections:
-      - fieldName: entry
-        node: {fileID: -5651849883539822671}
-        reroutePoints: []
+      connections: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0

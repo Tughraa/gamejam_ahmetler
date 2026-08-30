@@ -1539,10 +1539,7 @@ MonoBehaviour:
       _node: {fileID: -4056180245273814053}
       _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections:
-      - fieldName: entry
-        node: {fileID: 3145363066701312675}
-        reroutePoints: []
+      connections: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -1561,7 +1558,7 @@ MonoBehaviour:
   opt2: {fileID: 0}
   flirtLine: oh- rhat's interesting... i'm going to use the restroom
   ourLine: mirrors scare me; I feel as if there's another realm behind them
-  goodEnd: 0
+  goodEnd: 1
 --- !u!114 &-3093967570810305106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1633,8 +1630,8 @@ MonoBehaviour:
   entry: {fileID: 0}
   opt1: {fileID: 0}
   opt2: {fileID: 0}
-  flirtLine: "\xF6lm\xFCyoz amuna"
-  ourLine: 
+  flirtLine: 
+  ourLine: bye
   goodEnd: 1
 --- !u!114 &-2649397687794932891
 MonoBehaviour:
@@ -2450,8 +2447,8 @@ MonoBehaviour:
   entry: {fileID: 0}
   opt1: {fileID: 0}
   opt2: {fileID: 0}
-  flirtLine: FREAKOTULADIK
-  ourLine: 
+  flirtLine: ..
+  ourLine: ...bye
   goodEnd: 1
 --- !u!114 &-222590898085131510
 MonoBehaviour:
@@ -2580,7 +2577,6 @@ MonoBehaviour:
   - {fileID: 8645295599540795754}
   - {fileID: -4056180245273814053}
   - {fileID: -4313754948680053483}
-  - {fileID: 3145363066701312675}
   - {fileID: -2512950398129776111}
   - {fileID: 5339947169544265682}
   - {fileID: -7243621857615642996}
@@ -3227,62 +3223,6 @@ MonoBehaviour:
   flirtLine: the type you're gonna get tonight if you play your cards right :)
   ourLine: what kind of eating we are talking about?? :)
   goodEnd: 0
---- !u!114 &3145363066701312675
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a086981b227a3d438cdd044903c10cd, type: 3}
-  m_Name: Dialogue
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 6520, y: 5144}
-  ports:
-    keys:
-    - entry
-    - opt1
-    - opt2
-    values:
-    - _fieldName: entry
-      _node: {fileID: 3145363066701312675}
-      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: opt1
-        node: {fileID: -4056180245273814053}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: opt1
-      _node: {fileID: 3145363066701312675}
-      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: opt2
-      _node: {fileID: 3145363066701312675}
-      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  entry: {fileID: 0}
-  opt1: {fileID: 0}
-  opt2: {fileID: 0}
-  flirtLine: "baddie fumbling 4 y\u0131ll\u0131k"
-  ourLine: 
-  goodEnd: 0
 --- !u!114 &3212642986915961220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3469,8 +3409,8 @@ MonoBehaviour:
   entry: {fileID: 0}
   opt1: {fileID: 0}
   opt2: {fileID: 0}
-  flirtLine: "s\u0131k\u0131l\u0131r kalkar gider"
-  ourLine: 
+  flirtLine: 
+  ourLine: ...i'm gonna leave
   goodEnd: 1
 --- !u!114 &4101688657986962630
 MonoBehaviour:
@@ -4368,9 +4308,8 @@ MonoBehaviour:
   entry: {fileID: 0}
   opt1: {fileID: 0}
   opt2: {fileID: 0}
-  flirtLine: "NOT: BURADA B\u0130Z\u0130 \u0130\xC7K\u0130YLE BAYILTIP G\xD6T\xDCR\xDCP
-    Y\u0130YECEK"
-  ourLine: 
+  flirtLine: he he
+  ourLine: great :D
   goodEnd: 0
 --- !u!114 &6910563134051867740
 MonoBehaviour:

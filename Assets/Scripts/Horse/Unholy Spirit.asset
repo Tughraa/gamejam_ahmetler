@@ -13,13 +13,15 @@ MonoBehaviour:
   m_Name: Unholy Spirit
   m_EditorClassIdentifier: 
   horseName: Unholy Spirit
-  horseSprite: {fileID: 21300000, guid: 28c2f0b3d802727469b4ec1ad853729a, type: 3}
-  horsePictures: []
+  horseSprite: {fileID: 21300000, guid: d3c21a4a41d1db747aed066263456575, type: 3}
+  horsePictures:
+  - {fileID: 23217892453348118, guid: 4931179d6788a734a9dafa521dafff5d, type: 3}
+  - {fileID: -1547167708548112998, guid: 61af97079a9fec5408a474c04b80c384, type: 3}
   bio: ex police horse, ex racehorse. please be mindful of your league when scrolling
     and responding
   funnyAnswer1: 
   funnyAnswer2: 
   matchable: 1
-  textDialogue: {fileID: 0}
-  dateDialogue: {fileID: 0}
+  textDialogue: {fileID: 11400000, guid: 2da58369e7e8ce444b5c71f961cc10b5, type: 2}
+  dateDialogue: {fileID: 11400000, guid: 2da58369e7e8ce444b5c71f961cc10b5, type: 2}
   answers: 01000100000000000000000101010100000101010000010000000001000100000101000001000001

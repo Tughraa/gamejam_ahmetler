@@ -13,6 +13,8 @@ public class DateManager : MonoBehaviour
     public DialogueGraph dialogueGraph;
     private DialogueNode currentNode;
     public TMP_Text talkText;
+    public string goodEnd = "You went home safe.";
+    public string badEnd = "You learned not to trust other horses.";
 
     
     private Coroutine typingCoroutine;
@@ -103,11 +105,11 @@ public class DateManager : MonoBehaviour
         endScreen.gameObject.SetActive(true);
         if (good)
         {
-            endScreen.TriggerEnding("Date went well!");
+            endScreen.TriggerEnding(goodEnd);
         }
         else
         {
-            endScreen.TriggerEnding("You became a really nice horse-stew...");
+            endScreen.TriggerEnding(badEnd);
         }
     }
 

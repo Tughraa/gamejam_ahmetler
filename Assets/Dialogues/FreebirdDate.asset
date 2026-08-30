@@ -123,6 +123,68 @@ MonoBehaviour:
   ourLine: "when you say \u201Cdaydrinking,\u201D i was expecting something stronger
     than beer"
   goodEnd: 0
+--- !u!114 &-4082676536109923387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a086981b227a3d438cdd044903c10cd, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1128, y: -792}
+  ports:
+    keys:
+    - entry
+    - opt1
+    - opt2
+    values:
+    - _fieldName: entry
+      _node: {fileID: -4082676536109923387}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: opt1
+        node: {fileID: 8138561573156223710}
+        reroutePoints: []
+      - fieldName: opt1
+        node: {fileID: -2711583602994835827}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt1
+      _node: {fileID: -4082676536109923387}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt2
+      _node: {fileID: -4082676536109923387}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 6650835271390074892}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: {fileID: 0}
+  opt1: {fileID: 0}
+  opt2: {fileID: 0}
+  flirtLine: ...probably not
+  ourLine: see you around
+  goodEnd: 0
 --- !u!114 &-2711583602994835827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,7 +221,10 @@ MonoBehaviour:
       _node: {fileID: -2711583602994835827}
       _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: entry
+        node: {fileID: -4082676536109923387}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -168,7 +233,10 @@ MonoBehaviour:
       _node: {fileID: -2711583602994835827}
       _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: entry
+        node: {fileID: 3718588179424886564}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -178,7 +246,7 @@ MonoBehaviour:
   opt2: {fileID: 0}
   flirtLine: ofc man, let's bounce!
   ourLine: it was great dude! can you give me a ride to my barn?
-  goodEnd: 1
+  goodEnd: 0
 --- !u!114 &-2383190565427566907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -353,7 +421,7 @@ MonoBehaviour:
   entry: {fileID: 0}
   opt1: {fileID: 0}
   opt2: {fileID: 0}
-  flirtLine: "splash, splosh. (\xFCst\xFCn\xFC \xE7\u0131kar\u0131r)"
+  flirtLine: splash, splosh.
   ourLine: yeah, why not!
   goodEnd: 0
 --- !u!114 &11400000
@@ -381,6 +449,8 @@ MonoBehaviour:
   - {fileID: 7819813696498060770}
   - {fileID: -2711583602994835827}
   - {fileID: 8138561573156223710}
+  - {fileID: -4082676536109923387}
+  - {fileID: 3718588179424886564}
 --- !u!114 &581012065429896817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -502,6 +572,68 @@ MonoBehaviour:
   flirtLine: hi, I brought some beer.
   ourLine: 
   goodEnd: 0
+--- !u!114 &3718588179424886564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a086981b227a3d438cdd044903c10cd, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1160, y: -456}
+  ports:
+    keys:
+    - entry
+    - opt1
+    - opt2
+    values:
+    - _fieldName: entry
+      _node: {fileID: 3718588179424886564}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: opt2
+        node: {fileID: 8138561573156223710}
+        reroutePoints: []
+      - fieldName: opt2
+        node: {fileID: -2711583602994835827}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt1
+      _node: {fileID: 3718588179424886564}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt2
+      _node: {fileID: 3718588179424886564}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 6650835271390074892}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: {fileID: 0}
+  opt1: {fileID: 0}
+  opt2: {fileID: 0}
+  flirtLine: bye
+  ourLine: bye bye
+  goodEnd: 0
 --- !u!114 &5802172545939624673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -578,7 +710,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1016, y: 8}
+  position: {x: 1640, y: -232}
   ports:
     keys:
     - entry
@@ -595,6 +727,12 @@ MonoBehaviour:
         reroutePoints: []
       - fieldName: opt1
         node: {fileID: -8529927080514331015}
+        reroutePoints: []
+      - fieldName: opt2
+        node: {fileID: 3718588179424886564}
+        reroutePoints: []
+      - fieldName: opt2
+        node: {fileID: -4082676536109923387}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -621,8 +759,8 @@ MonoBehaviour:
   entry: {fileID: 0}
   opt1: {fileID: 0}
   opt2: {fileID: 0}
-  flirtLine: "c\xFCzdan\u0131m\u0131z\u0131 telefonumuzu \xE7ald\u0131..."
-  ourLine: 
+  flirtLine: 
+  ourLine: Where's my wallet and phone... wait... where are you?
   goodEnd: 0
 --- !u!114 &7819813696498060770
 MonoBehaviour:
@@ -716,7 +854,10 @@ MonoBehaviour:
       _node: {fileID: 8138561573156223710}
       _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: entry
+        node: {fileID: -4082676536109923387}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -725,7 +866,10 @@ MonoBehaviour:
       _node: {fileID: 8138561573156223710}
       _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: entry
+        node: {fileID: 3718588179424886564}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -735,4 +879,4 @@ MonoBehaviour:
   opt2: {fileID: 0}
   flirtLine: you too dude, it was great!
   ourLine: it was fun man, have a nice day!
-  goodEnd: 1
+  goodEnd: 0

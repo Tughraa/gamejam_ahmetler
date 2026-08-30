@@ -13,7 +13,7 @@ public class Instantiator : MonoBehaviour
     {
         // Find all CardDisplay components on the starting cards in the container
         CardDisplay[] startingCards = GetComponentsInChildren<CardDisplay>();
-
+        ShuffleDeck();
         // Unity UI order: Last child is the front card (index 0 in deck), first child is back card (index 1)
         for (int i = startingCards.Length - 1; i >= 0; i--)
         {
@@ -24,6 +24,16 @@ public class Instantiator : MonoBehaviour
             }
         }
     }
+    public void ShuffleDeck()
+{
+    for (int i = horseDeck.Count - 1; i > 0; i--)
+    {
+        int randomIndex = Random.Range(0, i + 1);
+        HorseData temp = horseDeck[i];
+        horseDeck[i] = horseDeck[randomIndex];
+        horseDeck[randomIndex] = temp;
+    }
+}
 
     public void InstantiateCard()
     {

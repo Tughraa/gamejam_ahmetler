@@ -13,13 +13,14 @@ MonoBehaviour:
   m_Name: Lucky Strike
   m_EditorClassIdentifier: 
   horseName: Lucky Strike
-  horseSprite: {fileID: 21300000, guid: 28c2f0b3d802727469b4ec1ad853729a, type: 3}
-  horsePictures: []
+  horseSprite: {fileID: 4837768670007646451, guid: bd7fbf3a1d4ff5145a298a720441b935, type: 3}
+  horsePictures:
+  - {fileID: 1122716819829054313, guid: 8d5fb431c472aac4fa8e7e15e5b57199, type: 3}
   bio: i'm just really bored; i'm looking for someone i can hang out with casually.
     three-time lucky luke cup champion. I love all kinds of ways to unwind.
   funnyAnswer1: 
   funnyAnswer2: 
   matchable: 1
-  textDialogue: {fileID: 0}
-  dateDialogue: {fileID: 0}
+  textDialogue: {fileID: 11400000, guid: b1da2d4e8f7adee4285cee3bfef22f1e, type: 2}
+  dateDialogue: {fileID: 11400000, guid: b1da2d4e8f7adee4285cee3bfef22f1e, type: 2}
   answers: 00000001010100000101000000000100000000000100010100010000000101000000010101000001

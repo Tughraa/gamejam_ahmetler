@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement; 
 
 public class EndScreen : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class EndScreen : MonoBehaviour
     public float typingSpeed = 0.05f;
     public Image[] toAppear;
     public float appearTime = 3f;
+    public GameObject datingPart;
     void Awake()
     {
         endText = this.transform.GetChild(0).GetComponent<TMP_Text>();
@@ -26,6 +28,7 @@ public class EndScreen : MonoBehaviour
 
     public void TriggerEnding(string inEndText) //maybe input music aswell
     {
+        SoundManager.instance.ToggleMusic();
         StartCoroutine(TypeText(inEndText));
     }
     private IEnumerator TypeText(string text)
@@ -72,5 +75,15 @@ public class EndScreen : MonoBehaviour
             c.a = 1f;
             img.color = c;
         }
+    }
+    public void KeepDating()
+    {
+        datingPart.SetActive(false);
+        SoundManager.instance.ToggleMusic();
+        SoundManager.instance.ChangeMusic();
+    }
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

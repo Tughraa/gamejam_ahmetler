@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Aurora
   m_EditorClassIdentifier: 
   horseName: Aurora
-  horseSprite: {fileID: 21300000, guid: 28c2f0b3d802727469b4ec1ad853729a, type: 3}
-  horsePictures: []
+  horseSprite: {fileID: 7430191469433721020, guid: 14ecf5b64bebee24c8c23378ab229b99, type: 3}
+  horsePictures:
+  - {fileID: -3576826438324389236, guid: 99194ce08e0434b49bd3b418733765dd, type: 3}
+  - {fileID: 7595008090626344601, guid: 355a234b23015444f95d727b899d79fe, type: 3}
   bio: I don't always go to parties, but wherever I go, the party follows me there...
   funnyAnswer1: 
   funnyAnswer2: 

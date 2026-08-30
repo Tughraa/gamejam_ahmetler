@@ -59,62 +59,6 @@ MonoBehaviour:
   flirtLine: sup shawty?
   ourLine: 
   goodEnd: 0
---- !u!114 &-5088998937702329264
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a086981b227a3d438cdd044903c10cd, type: 3}
-  m_Name: Dialogue
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 24, y: 104}
-  ports:
-    keys:
-    - entry
-    - opt1
-    - opt2
-    values:
-    - _fieldName: entry
-      _node: {fileID: -5088998937702329264}
-      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: opt2
-        node: {fileID: -2019354587653699741}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: opt1
-      _node: {fileID: -5088998937702329264}
-      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: opt2
-      _node: {fileID: -5088998937702329264}
-      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  entry: {fileID: 0}
-  opt1: {fileID: 0}
-  opt2: {fileID: 0}
-  flirtLine: 
-  ourLine: 
-  goodEnd: 0
 --- !u!114 &-2019354587653699741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,10 +104,7 @@ MonoBehaviour:
       _node: {fileID: -2019354587653699741}
       _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections:
-      - fieldName: entry
-        node: {fileID: -5088998937702329264}
-        reroutePoints: []
+      connections: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -190,66 +131,8 @@ MonoBehaviour:
   - {fileID: -9197593117986151486}
   - {fileID: 7455097361854035401}
   - {fileID: -2019354587653699741}
-  - {fileID: -5088998937702329264}
   - {fileID: 5636324279553394284}
   - {fileID: 6262715526404713096}
-  - {fileID: 4500579957476194626}
---- !u!114 &4500579957476194626
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a086981b227a3d438cdd044903c10cd, type: 3}
-  m_Name: Dialogue
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 408, y: -616}
-  ports:
-    keys:
-    - entry
-    - opt1
-    - opt2
-    values:
-    - _fieldName: entry
-      _node: {fileID: 4500579957476194626}
-      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: opt1
-        node: {fileID: 6262715526404713096}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: opt1
-      _node: {fileID: 4500579957476194626}
-      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: opt2
-      _node: {fileID: 4500579957476194626}
-      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  entry: {fileID: 0}
-  opt1: {fileID: 0}
-  opt2: {fileID: 0}
-  flirtLine: 
-  ourLine: 
-  goodEnd: 0
 --- !u!114 &5636324279553394284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -342,10 +225,7 @@ MonoBehaviour:
       _node: {fileID: 6262715526404713096}
       _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections:
-      - fieldName: entry
-        node: {fileID: 4500579957476194626}
-        reroutePoints: []
+      connections: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0

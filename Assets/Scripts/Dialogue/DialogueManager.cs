@@ -108,8 +108,38 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            myButton.interactable = false;
+            
         }
+        myButton.interactable = false;
+    }
+    public void AskOut()
+    {
+        GameObject datey = messagesManager.datey;
+        datey.SetActive(true);
+        foreach (Transform textTab in datey.transform)
+        {
+            textTab.gameObject.SetActive(false);
+        }
+
+        if (horse.horseName == "Antheia")
+        {
+            datey.transform.GetChild(3).gameObject.SetActive(true);
+        }
+        if (horse.horseName == "Freebird")
+        {
+            datey.transform.GetChild(2).gameObject.SetActive(true);
+            
+        }
+        if (horse.horseName == "Aurora")
+        {
+            datey.transform.GetChild(0).gameObject.SetActive(true);
+        }
+        if (horse.horseName == "Holy_Moon")
+        {
+            datey.transform.GetChild(1).gameObject.SetActive(true);
+        }
+        SoundManager.instance.ChangeMusic();
+        messagesManager.CloseTabs();
     }
 
     private void SelectOption(DialogueNode next)

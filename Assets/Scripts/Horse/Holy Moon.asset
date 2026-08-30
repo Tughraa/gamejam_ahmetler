@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ae165336d40e8148a4348dd54ff5e46, type: 3}
   m_Name: Holy Moon
   m_EditorClassIdentifier: 
-  horseName: Holy Moon
+  horseName: Holy_Moon
   horseSprite: {fileID: 21300000, guid: b9a72d9359ae39f4d8e307a6dedda7c3, type: 3}
   horsePictures:
   - {fileID: 21300000, guid: e05d567df6a82bc4bbd391ec2b520e99, type: 3}

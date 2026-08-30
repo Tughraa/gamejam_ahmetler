@@ -7,6 +7,7 @@ public static class MatchEvaluator
     public static bool EvaluateMatch(HorseData targetHorse, HorseData playerProfile, out float matchPercent)
     {
         matchPercent = 0f;
+        return true;
 
         // 1. Strict Gate: Is this horse matchable?
         if (targetHorse == null || !targetHorse.matchable)

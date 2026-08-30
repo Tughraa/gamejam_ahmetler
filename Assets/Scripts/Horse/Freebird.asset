@@ -13,12 +13,14 @@ MonoBehaviour:
   m_Name: Freebird
   m_EditorClassIdentifier: 
   horseName: Freebird
-  horseSprite: {fileID: 21300000, guid: 28c2f0b3d802727469b4ec1ad853729a, type: 3}
-  horsePictures: []
+  horseSprite: {fileID: 21300000, guid: 4ef4d37d4bee19a438d018f566586441, type: 3}
+  horsePictures:
+  - {fileID: -1717309907364288331, guid: 221aa3b5eff32f740923006721cfc919, type: 3}
+  - {fileID: 21300000, guid: 0bf0c41b18dd1e44f83f9ff5c7ac17ea, type: 3}
   bio: horse around and find out
   funnyAnswer1: 
   funnyAnswer2: 
   matchable: 1
-  textDialogue: {fileID: 0}
-  dateDialogue: {fileID: 0}
+  textDialogue: {fileID: 11400000, guid: c8f6db8eb20a8f546906c13865d120a0, type: 2}
+  dateDialogue: {fileID: 11400000, guid: 376a5f3982a444540b692d101ff266a8, type: 2}
   answers: 00000001010100000101000001010000000101000100010101010100010101000101010100010100

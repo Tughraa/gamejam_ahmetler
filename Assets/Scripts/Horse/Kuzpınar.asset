@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: "Kuzp\u0131nar"
   m_EditorClassIdentifier: 
   horseName: "Kuzp\u0131nar"
-  horseSprite: {fileID: 0}
-  horsePictures: []
+  horseSprite: {fileID: 1502445737748530604, guid: fefe44d5c3dd79d44a41eed455c76c63, type: 3}
+  horsePictures:
+  - {fileID: 21300000, guid: b3b1c733d2cdec846ab187381f891fba, type: 3}
+  - {fileID: 5290399914513823507, guid: b6cf5e9d6e92f8d418157aa7898fe954, type: 3}
   bio: I love card games and beautiful mares
   funnyAnswer1: 
   funnyAnswer2: 

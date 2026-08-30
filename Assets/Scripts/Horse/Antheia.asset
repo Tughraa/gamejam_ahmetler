@@ -13,12 +13,14 @@ MonoBehaviour:
   m_Name: Antheia
   m_EditorClassIdentifier: 
   horseName: Antheia
-  horseSprite: {fileID: 0}
-  horsePictures: []
+  horseSprite: {fileID: 4178031506093661308, guid: 1b4c023eee02c2b4489e37853c1f7681, type: 3}
+  horsePictures:
+  - {fileID: -6732013334933111664, guid: f86283ba1d585b74fa19d17796d457dc, type: 3}
+  - {fileID: -5459107847277892823, guid: d69d53459500526458ea30b61195f797, type: 3}
   bio: I really love flowers, wildlife, and wild horses
   funnyAnswer1: 
   funnyAnswer2: 
   matchable: 1
-  textDialogue: {fileID: 0}
-  dateDialogue: {fileID: 0}
+  textDialogue: {fileID: 11400000, guid: 691cc7a6188e95841a19e5d7e558bb88, type: 2}
+  dateDialogue: {fileID: 11400000, guid: 807fc85b03ad0fb429a9bc03ad6cf3e8, type: 2}
   answers: 

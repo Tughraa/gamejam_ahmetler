@@ -12,6 +12,7 @@ public class MessagesManager : MonoBehaviour
     public float tabSpacing = 80f;
     public HorseData[] matchedHorses;
     public Color[] tabColors;
+    public GameObject datey;
     void Start()
     {
         CloseTabs();
