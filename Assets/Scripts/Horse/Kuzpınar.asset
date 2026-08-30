@@ -15,10 +15,10 @@ MonoBehaviour:
   horseName: "Kuzp\u0131nar"
   horseSprite: {fileID: 0}
   horsePictures: []
-  bio: 
+  bio: I love card games and beautiful mares
   funnyAnswer1: 
   funnyAnswer2: 
   matchable: 1
-  textDialogue: {fileID: 0}
-  dateDialogue: {fileID: 0}
+  textDialogue: {fileID: 11400000, guid: 37a88bea451ba6b43999508a8241086c, type: 2}
+  dateDialogue: {fileID: 11400000, guid: 37a88bea451ba6b43999508a8241086c, type: 2}
   answers: 

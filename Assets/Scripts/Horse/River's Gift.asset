@@ -15,7 +15,8 @@ MonoBehaviour:
   horseName: River's Gift
   horseSprite: {fileID: 0}
   horsePictures: []
-  bio: 
+  bio: "if life gives you lemons, you\u2019ll spend your whole life trying to find
+    some tequila"
   funnyAnswer1: 
   funnyAnswer2: 
   matchable: 1

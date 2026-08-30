@@ -15,8 +15,11 @@ MonoBehaviour:
   horseName: God's Rebellion
   horseSprite: {fileID: 21300000, guid: 28c2f0b3d802727469b4ec1ad853729a, type: 3}
   horsePictures: []
+  bio: I'm looking for someone to talk to; time will tell where the relationship
+    goes. one-time lucky luke cup champion
+  funnyAnswer1: "\r"
+  funnyAnswer2: 
   matchable: 1
-  bio: 
-  textDialogue: {fileID: 0}
-  dateDialogue: {fileID: 0}
+  textDialogue: {fileID: 11400000, guid: ffefbfdfe9370a44780ed47a1412badb, type: 2}
+  dateDialogue: {fileID: 11400000, guid: ffefbfdfe9370a44780ed47a1412badb, type: 2}
   answers: 01000001000100010001010000000101000001000000000000000001000100000001000001000101

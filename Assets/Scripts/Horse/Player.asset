@@ -15,7 +15,7 @@ MonoBehaviour:
   horseName: duldul
   horseSprite: {fileID: 0}
   horsePictures: []
-  bio: 
+  bio: i'm a player...
   funnyAnswer1: 
   funnyAnswer2: 
   matchable: 1

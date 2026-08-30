@@ -15,7 +15,7 @@ MonoBehaviour:
   horseName: Aurora
   horseSprite: {fileID: 21300000, guid: 28c2f0b3d802727469b4ec1ad853729a, type: 3}
   horsePictures: []
-  bio: 
+  bio: I don't always go to parties, but wherever I go, the party follows me there...
   funnyAnswer1: 
   funnyAnswer2: 
   matchable: 1

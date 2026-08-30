@@ -1,0 +1,1025 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7093069201339237785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a086981b227a3d438cdd044903c10cd, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 829.52026, y: 586.20276}
+  ports:
+    keys:
+    - entry
+    - opt1
+    - opt2
+    values:
+    - _fieldName: entry
+      _node: {fileID: -7093069201339237785}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: opt1
+        node: {fileID: -1358973015497369395}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt1
+      _node: {fileID: -7093069201339237785}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 6806479540861646531}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt2
+      _node: {fileID: -7093069201339237785}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 9175496768435061944}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: {fileID: 0}
+  opt1: {fileID: 0}
+  opt2: {fileID: 0}
+  flirtLine: I'm sorry, but they're a part of my life too, and you should have realized
+    that, along with my little horsies, we are the whole package...
+  ourLine: Can't we spend some time alone together without the kids? It'll be our
+    first date.
+  goodEnd: 0
+--- !u!114 &-6063629253891462745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a086981b227a3d438cdd044903c10cd, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 72, y: 216}
+  ports:
+    keys:
+    - entry
+    - opt1
+    - opt2
+    values:
+    - _fieldName: entry
+      _node: {fileID: -6063629253891462745}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: opt2
+        node: {fileID: 86810275164674631}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt1
+      _node: {fileID: -6063629253891462745}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: -4918976670819668149}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt2
+      _node: {fileID: -6063629253891462745}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: -1358973015497369395}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: {fileID: 0}
+  opt1: {fileID: 0}
+  opt2: {fileID: 0}
+  flirtLine: "Hearing that made me so happy. You really seem like the kind of horse
+    I\u2019d love to meet :))"
+  ourLine: Thank you. You and your kids are really so sweet.
+  goodEnd: 0
+--- !u!114 &-4918976670819668149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a086981b227a3d438cdd044903c10cd, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 440, y: 152}
+  ports:
+    keys:
+    - entry
+    - opt1
+    - opt2
+    values:
+    - _fieldName: entry
+      _node: {fileID: -4918976670819668149}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: opt1
+        node: {fileID: -6063629253891462745}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt1
+      _node: {fileID: -4918976670819668149}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 7422953250893119209}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt2
+      _node: {fileID: -4918976670819668149}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 3167536098036362828}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: {fileID: 0}
+  opt1: {fileID: 0}
+  opt2: {fileID: 0}
+  flirtLine: I really don't have time. Taking care of kids is hard work. Sometimes
+    I can't even go to my yoga class. It would be nice to leave the kids with someone
+    I can trust. Then we could spend some time together after yoga...
+  ourLine: It will happen as soon as you're available
+  goodEnd: 0
+--- !u!114 &-4137760856473756931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a086981b227a3d438cdd044903c10cd, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 488, y: -264}
+  ports:
+    keys:
+    - entry
+    - opt1
+    - opt2
+    values:
+    - _fieldName: entry
+      _node: {fileID: -4137760856473756931}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: opt1
+        node: {fileID: -1386368462397436919}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt1
+      _node: {fileID: -4137760856473756931}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 4810510617009283826}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt2
+      _node: {fileID: -4137760856473756931}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 4310430305222477002}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: {fileID: 0}
+  opt1: {fileID: 0}
+  opt2: {fileID: 0}
+  flirtLine: Haha, don't you think we're rushing things a bit?
+  ourLine: "To be honest, I\u2019d like to see them myself"
+  goodEnd: 0
+--- !u!114 &-1386368462397436919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a086981b227a3d438cdd044903c10cd, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 88, y: -216}
+  ports:
+    keys:
+    - entry
+    - opt1
+    - opt2
+    values:
+    - _fieldName: entry
+      _node: {fileID: -1386368462397436919}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: opt1
+        node: {fileID: 86810275164674631}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt1
+      _node: {fileID: -1386368462397436919}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: -4137760856473756931}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt2
+      _node: {fileID: -1386368462397436919}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: -756536584030976612}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: {fileID: 0}
+  opt1: {fileID: 0}
+  opt2: {fileID: 0}
+  flirtLine: Really??? My cheeks are bright red :)
+  ourLine: Thank you. There's no way I can describe just how sweet you are :)
+  goodEnd: 0
+--- !u!114 &-1358973015497369395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a086981b227a3d438cdd044903c10cd, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 440, y: 760}
+  ports:
+    keys:
+    - entry
+    - opt1
+    - opt2
+    values:
+    - _fieldName: entry
+      _node: {fileID: -1358973015497369395}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: opt2
+        node: {fileID: -6063629253891462745}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt1
+      _node: {fileID: -1358973015497369395}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: -7093069201339237785}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt2
+      _node: {fileID: -1358973015497369395}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: -956181310528501658}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: {fileID: 0}
+  opt1: {fileID: 0}
+  opt2: {fileID: 0}
+  flirtLine: "That sounds like a great plan, but there\u2019s no one to watch the
+    kids :( How about you come over and hang out with us, and then we can spend some
+    time alone together afterward?"
+  ourLine: So, how about going out for dinner on Tuesday?
+  goodEnd: 0
+--- !u!114 &-956181310528501658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a086981b227a3d438cdd044903c10cd, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 851.85504, y: 824.8644}
+  ports:
+    keys:
+    - entry
+    - opt1
+    - opt2
+    values:
+    - _fieldName: entry
+      _node: {fileID: -956181310528501658}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: opt2
+        node: {fileID: -1358973015497369395}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt1
+      _node: {fileID: -956181310528501658}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 6806479540861646531}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt2
+      _node: {fileID: -956181310528501658}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 9175496768435061944}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: {fileID: 0}
+  opt1: {fileID: 0}
+  opt2: {fileID: 0}
+  flirtLine: If you could watch the kids for a bit and let me rest, u ll get what
+    u want :)
+  ourLine: If I can have a nice dessert at the end of the night, why not? :)
+  goodEnd: 0
+--- !u!114 &-756536584030976612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a086981b227a3d438cdd044903c10cd, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 456, y: -72}
+  ports:
+    keys:
+    - entry
+    - opt1
+    - opt2
+    values:
+    - _fieldName: entry
+      _node: {fileID: -756536584030976612}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: opt2
+        node: {fileID: -1386368462397436919}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt1
+      _node: {fileID: -756536584030976612}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 7422953250893119209}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt2
+      _node: {fileID: -756536584030976612}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 3167536098036362828}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: {fileID: 0}
+  opt1: {fileID: 0}
+  opt2: {fileID: 0}
+  flirtLine: I really don't have time. Taking care of kids is hard work. Sometimes
+    I can't even go to my yoga class. It would be nice to leave the kids with someone
+    I can trust. Then we could spend some time together after yoga...
+  ourLine: I'm sure they look really cute :)
+  goodEnd: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8497a50fc775e3146b249c9863de4e78, type: 3}
+  m_Name: JuniperTexting
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 86810275164674631}
+  - {fileID: -1386368462397436919}
+  - {fileID: -6063629253891462745}
+  - {fileID: -4137760856473756931}
+  - {fileID: -756536584030976612}
+  - {fileID: 4810510617009283826}
+  - {fileID: 4310430305222477002}
+  - {fileID: -4918976670819668149}
+  - {fileID: -1358973015497369395}
+  - {fileID: 7422953250893119209}
+  - {fileID: 3167536098036362828}
+  - {fileID: 2359790199316386776}
+  - {fileID: 6806479540861646531}
+  - {fileID: -7093069201339237785}
+  - {fileID: -956181310528501658}
+  - {fileID: 9175496768435061944}
+--- !u!114 &86810275164674631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a086981b227a3d438cdd044903c10cd, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -311.75, y: -45}
+  ports:
+    keys:
+    - entry
+    - opt1
+    - opt2
+    values:
+    - _fieldName: entry
+      _node: {fileID: 86810275164674631}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt1
+      _node: {fileID: 86810275164674631}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: -1386368462397436919}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt2
+      _node: {fileID: 86810275164674631}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: -6063629253891462745}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: {fileID: 0}
+  opt1: {fileID: 0}
+  opt2: {fileID: 0}
+  flirtLine: 
+  ourLine: I haven't seen such a beautiful horse in a long time :)
+  goodEnd: 0
+--- !u!114 &2359790199316386776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a086981b227a3d438cdd044903c10cd, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1288, y: 40}
+  ports:
+    keys:
+    - entry
+    - opt1
+    - opt2
+    values:
+    - _fieldName: entry
+      _node: {fileID: 2359790199316386776}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: opt1
+        node: {fileID: 7422953250893119209}
+        reroutePoints: []
+      - fieldName: opt1
+        node: {fileID: 3167536098036362828}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt1
+      _node: {fileID: 2359790199316386776}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt2
+      _node: {fileID: 2359790199316386776}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: {fileID: 0}
+  opt1: {fileID: 0}
+  opt2: {fileID: 0}
+  flirtLine: 
+  ourLine: Go find yourself some other suckers. I'm outta here.
+  goodEnd: 0
+--- !u!114 &3167536098036362828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a086981b227a3d438cdd044903c10cd, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 824, y: 328}
+  ports:
+    keys:
+    - entry
+    - opt1
+    - opt2
+    values:
+    - _fieldName: entry
+      _node: {fileID: 3167536098036362828}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: opt2
+        node: {fileID: -4918976670819668149}
+        reroutePoints: []
+      - fieldName: opt2
+        node: {fileID: -756536584030976612}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt1
+      _node: {fileID: 3167536098036362828}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 2359790199316386776}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt2
+      _node: {fileID: 3167536098036362828}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 6806479540861646531}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: {fileID: 0}
+  opt1: {fileID: 0}
+  opt2: {fileID: 0}
+  flirtLine: I thought you could be a good father figure in our home...
+  ourLine: I don't really know much about taking care of children; I'm sorry.
+  goodEnd: 0
+--- !u!114 &4310430305222477002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a086981b227a3d438cdd044903c10cd, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 950.6226, y: -69.29785}
+  ports:
+    keys:
+    - entry
+    - opt1
+    - opt2
+    values:
+    - _fieldName: entry
+      _node: {fileID: 4310430305222477002}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: opt2
+        node: {fileID: -4137760856473756931}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt1
+      _node: {fileID: 4310430305222477002}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt2
+      _node: {fileID: 4310430305222477002}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: {fileID: 0}
+  opt1: {fileID: 0}
+  opt2: {fileID: 0}
+  flirtLine: I'm sorry, but I haven't seen anyone in a long time, and I don't want
+    to rush things. Take care of yourself.
+  ourLine: "I\u2019d love to meet someone as beautiful as you right away :))))"
+  goodEnd: 0
+--- !u!114 &4810510617009283826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a086981b227a3d438cdd044903c10cd, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 904, y: -280}
+  ports:
+    keys:
+    - entry
+    - opt1
+    - opt2
+    values:
+    - _fieldName: entry
+      _node: {fileID: 4810510617009283826}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: opt1
+        node: {fileID: -4137760856473756931}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt1
+      _node: {fileID: 4810510617009283826}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt2
+      _node: {fileID: 4810510617009283826}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: {fileID: 0}
+  opt1: {fileID: 0}
+  opt2: {fileID: 0}
+  flirtLine: I'm sorry, but I haven't seen anyone in a long time, and I don't want
+    to rush things. Take care of yourself.
+  ourLine: You know, we move fast its just in our nature :)
+  goodEnd: 0
+--- !u!114 &6806479540861646531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a086981b227a3d438cdd044903c10cd, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1288, y: 200}
+  ports:
+    keys:
+    - entry
+    - opt1
+    - opt2
+    values:
+    - _fieldName: entry
+      _node: {fileID: 6806479540861646531}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: opt2
+        node: {fileID: 7422953250893119209}
+        reroutePoints: []
+      - fieldName: opt2
+        node: {fileID: 3167536098036362828}
+        reroutePoints: []
+      - fieldName: opt1
+        node: {fileID: -7093069201339237785}
+        reroutePoints: []
+      - fieldName: opt1
+        node: {fileID: -956181310528501658}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt1
+      _node: {fileID: 6806479540861646531}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt2
+      _node: {fileID: 6806479540861646531}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: {fileID: 0}
+  opt1: {fileID: 0}
+  opt2: {fileID: 0}
+  flirtLine: 
+  ourLine: I'm sorry but I don't think we make the best fit.
+  goodEnd: 0
+--- !u!114 &7422953250893119209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a086981b227a3d438cdd044903c10cd, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 824, y: 104}
+  ports:
+    keys:
+    - entry
+    - opt1
+    - opt2
+    values:
+    - _fieldName: entry
+      _node: {fileID: 7422953250893119209}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: opt1
+        node: {fileID: -4918976670819668149}
+        reroutePoints: []
+      - fieldName: opt1
+        node: {fileID: -756536584030976612}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt1
+      _node: {fileID: 7422953250893119209}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 2359790199316386776}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt2
+      _node: {fileID: 7422953250893119209}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 6806479540861646531}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: {fileID: 0}
+  opt1: {fileID: 0}
+  opt2: {fileID: 0}
+  flirtLine: I thought you could be a good father figure in our home...
+  ourLine: Do you want me to take care of your kids?????????????? Even though you
+    don't know me?????
+  goodEnd: 0
+--- !u!114 &9175496768435061944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a086981b227a3d438cdd044903c10cd, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1240, y: 680}
+  ports:
+    keys:
+    - entry
+    - opt1
+    - opt2
+    values:
+    - _fieldName: entry
+      _node: {fileID: 9175496768435061944}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: opt2
+        node: {fileID: -7093069201339237785}
+        reroutePoints: []
+      - fieldName: opt2
+        node: {fileID: -956181310528501658}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt1
+      _node: {fileID: 9175496768435061944}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt2
+      _node: {fileID: 9175496768435061944}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: {fileID: 0}
+  opt1: {fileID: 0}
+  opt2: {fileID: 0}
+  flirtLine: 
+  ourLine: You couldn't have made it any more obvious that you wanted to use me.
+    You were a fine horse. It's a shame.
+  goodEnd: 0

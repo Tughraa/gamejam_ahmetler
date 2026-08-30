@@ -62,7 +62,6 @@ public class FirstCard : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDra
 
     public void OnBeginDrag(PointerEventData pointerEventData)
     {
-        Debug.Log("began draggin, yeag");
         _currentDragDirection = DragDirection.None;
 
         // If already scrolled into details, lock directly to vertical scrolling
@@ -129,8 +128,6 @@ public class FirstCard : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDra
 
     public void OnEndDrag(PointerEventData pointerEventData)
     {
-        
-        SoundManager.instance.PlaySoundEffect(swipeSoundFX,0.85f);
         if (_currentDragDirection == DragDirection.Vertical)
         {
             _currentDragDirection = DragDirection.None;
@@ -208,7 +205,7 @@ public class FirstCard : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDra
             _rectTransform.anchoredPosition = Vector2.Lerp(startPos, targetPos, t);
             yield return null;
         }
-
+        SoundManager.instance.PlaySoundEffect(swipeSoundFX,0.85f);
         Destroy(gameObject);
     }
 }

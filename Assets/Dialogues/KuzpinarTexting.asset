@@ -1,0 +1,1341 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8150440029717542468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a086981b227a3d438cdd044903c10cd, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1224, y: 520}
+  ports:
+    keys:
+    - entry
+    - opt1
+    - opt2
+    values:
+    - _fieldName: entry
+      _node: {fileID: -8150440029717542468}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: opt1
+        node: {fileID: -4821965744682220892}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt1
+      _node: {fileID: -8150440029717542468}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: -3277079631172618398}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt2
+      _node: {fileID: -8150440029717542468}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 3573482371790818800}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: {fileID: 0}
+  opt1: {fileID: 0}
+  opt2: {fileID: 0}
+  flirtLine: Horses can feel passion for breeding, but can't they feel it for gambling?
+    That's a lot of fun, too!
+  ourLine: I saw a casino photo on your  profile..
+  goodEnd: 0
+--- !u!114 &-7627727202496644969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a086981b227a3d438cdd044903c10cd, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 456, y: 200}
+  ports:
+    keys:
+    - entry
+    - opt1
+    - opt2
+    values:
+    - _fieldName: entry
+      _node: {fileID: -7627727202496644969}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: opt1
+        node: {fileID: 5745485245827191290}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt1
+      _node: {fileID: -7627727202496644969}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 8437587086348852041}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt2
+      _node: {fileID: -7627727202496644969}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: -4821965744682220892}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: {fileID: 0}
+  opt1: {fileID: 0}
+  opt2: {fileID: 0}
+  flirtLine: why not lets go to casinoooooooooo neighhhh
+  ourLine: Do you think you could have fun with me?
+  goodEnd: 0
+--- !u!114 &-6267200137310501421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a086981b227a3d438cdd044903c10cd, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 456, y: 424}
+  ports:
+    keys:
+    - entry
+    - opt1
+    - opt2
+    values:
+    - _fieldName: entry
+      _node: {fileID: -6267200137310501421}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: opt2
+        node: {fileID: 5745485245827191290}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt1
+      _node: {fileID: -6267200137310501421}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 8437587086348852041}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt2
+      _node: {fileID: -6267200137310501421}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: -4821965744682220892}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: {fileID: 0}
+  opt1: {fileID: 0}
+  opt2: {fileID: 0}
+  flirtLine: why not lets go to casinoooooooooo neighhhh
+  ourLine: Maybe I can help you have some fun :)
+  goodEnd: 0
+--- !u!114 &-6154068103145247551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a086981b227a3d438cdd044903c10cd, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1288, y: -360}
+  ports:
+    keys:
+    - entry
+    - opt1
+    - opt2
+    values:
+    - _fieldName: entry
+      _node: {fileID: -6154068103145247551}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: opt1
+        node: {fileID: 8749870966729598934}
+        reroutePoints: []
+      - fieldName: opt1
+        node: {fileID: -3207904596538488107}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt1
+      _node: {fileID: -6154068103145247551}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt2
+      _node: {fileID: -6154068103145247551}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: {fileID: 0}
+  opt1: {fileID: 0}
+  opt2: {fileID: 0}
+  flirtLine: Your loss
+  ourLine: I have nothing to do with gambling. Goodbye.
+  goodEnd: 0
+--- !u!114 &-5519601402780546123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a086981b227a3d438cdd044903c10cd, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1224, y: 280}
+  ports:
+    keys:
+    - entry
+    - opt1
+    - opt2
+    values:
+    - _fieldName: entry
+      _node: {fileID: -5519601402780546123}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: opt2
+        node: {fileID: 8437587086348852041}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt1
+      _node: {fileID: -5519601402780546123}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: -2220782332246085341}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt2
+      _node: {fileID: -5519601402780546123}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 6456541109940295189}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: {fileID: 0}
+  opt1: {fileID: 0}
+  opt2: {fileID: 0}
+  flirtLine: 'All right, here''s the situation: I''m a little strapped for cash right
+    now, but if you help me out, we can both come out ahead. What do you say?'
+  ourLine: All right, why not? When?
+  goodEnd: 0
+--- !u!114 &-5312417455114303859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a086981b227a3d438cdd044903c10cd, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1224, y: 744}
+  ports:
+    keys:
+    - entry
+    - opt1
+    - opt2
+    values:
+    - _fieldName: entry
+      _node: {fileID: -5312417455114303859}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: opt2
+        node: {fileID: -4821965744682220892}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt1
+      _node: {fileID: -5312417455114303859}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: -3277079631172618398}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt2
+      _node: {fileID: -5312417455114303859}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 3573482371790818800}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: {fileID: 0}
+  opt1: {fileID: 0}
+  opt2: {fileID: 0}
+  flirtLine: Horses can feel passion for breeding, but can't they feel it for gambling?
+    That's a lot of fun, too!
+  ourLine: You seem really excited about it....
+  goodEnd: 0
+--- !u!114 &-4821965744682220892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a086981b227a3d438cdd044903c10cd, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 840, y: 616}
+  ports:
+    keys:
+    - entry
+    - opt1
+    - opt2
+    values:
+    - _fieldName: entry
+      _node: {fileID: -4821965744682220892}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: opt2
+        node: {fileID: -7627727202496644969}
+        reroutePoints: []
+      - fieldName: opt2
+        node: {fileID: -6267200137310501421}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt1
+      _node: {fileID: -4821965744682220892}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: -8150440029717542468}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt2
+      _node: {fileID: -4821965744682220892}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: -5312417455114303859}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: {fileID: 0}
+  opt1: {fileID: 0}
+  opt2: {fileID: 0}
+  flirtLine: h-No, I only go there rarely. Where did you get that idea?
+  ourLine: Do you gamble a lot?
+  goodEnd: 0
+--- !u!114 &-3277079631172618398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a086981b227a3d438cdd044903c10cd, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1672, y: 568}
+  ports:
+    keys:
+    - entry
+    - opt1
+    - opt2
+    values:
+    - _fieldName: entry
+      _node: {fileID: -3277079631172618398}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: opt1
+        node: {fileID: -5312417455114303859}
+        reroutePoints: []
+      - fieldName: opt1
+        node: {fileID: -8150440029717542468}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt1
+      _node: {fileID: -3277079631172618398}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt2
+      _node: {fileID: -3277079631172618398}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: {fileID: 0}
+  opt1: {fileID: 0}
+  opt2: {fileID: 0}
+  flirtLine: 
+  ourLine: Not even your mom wants to spend time with you
+  goodEnd: 0
+--- !u!114 &-3211493247950589568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a086981b227a3d438cdd044903c10cd, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 440, y: -168}
+  ports:
+    keys:
+    - entry
+    - opt1
+    - opt2
+    values:
+    - _fieldName: entry
+      _node: {fileID: -3211493247950589568}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: opt2
+        node: {fileID: 67251506226214098}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt1
+      _node: {fileID: -3211493247950589568}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 8749870966729598934}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt2
+      _node: {fileID: -3211493247950589568}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: -3207904596538488107}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: {fileID: 0}
+  opt1: {fileID: 0}
+  opt2: {fileID: 0}
+  flirtLine: "Of course, who would want to miss out on such a wonderful partner?
+    You\u2019ll be my lucky charm :)"
+  ourLine: "You're so sweet. I'd love to go out with someone like you. Where would
+    you prefer to go? The beach or a caf\xE9?"
+  goodEnd: 0
+--- !u!114 &-3207904596538488107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a086981b227a3d438cdd044903c10cd, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 840, y: -120}
+  ports:
+    keys:
+    - entry
+    - opt1
+    - opt2
+    values:
+    - _fieldName: entry
+      _node: {fileID: -3207904596538488107}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: opt2
+        node: {fileID: 643166017676114877}
+        reroutePoints: []
+      - fieldName: opt2
+        node: {fileID: -3211493247950589568}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt1
+      _node: {fileID: -3207904596538488107}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: -6154068103145247551}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt2
+      _node: {fileID: -3207904596538488107}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 4341677992497466630}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: {fileID: 0}
+  opt1: {fileID: 0}
+  opt2: {fileID: 0}
+  flirtLine: My bills are coming due, and we can hit the jackpot  on the slot machine
+    together, baby.
+  ourLine: What do you mean?
+  goodEnd: 0
+--- !u!114 &-2220782332246085341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a086981b227a3d438cdd044903c10cd, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1624, y: 120}
+  ports:
+    keys:
+    - entry
+    - opt1
+    - opt2
+    values:
+    - _fieldName: entry
+      _node: {fileID: -2220782332246085341}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: opt1
+        node: {fileID: 8695610426334608329}
+        reroutePoints: []
+      - fieldName: opt1
+        node: {fileID: -5519601402780546123}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt1
+      _node: {fileID: -2220782332246085341}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt2
+      _node: {fileID: -2220782332246085341}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: {fileID: 0}
+  opt1: {fileID: 0}
+  opt2: {fileID: 0}
+  flirtLine: 
+  ourLine: 'Are you going to make me pay your gambling debt? WTF? blocked '
+  goodEnd: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8497a50fc775e3146b249c9863de4e78, type: 3}
+  m_Name: KuzpinarTexting
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 1768484190831949116}
+  - {fileID: 67251506226214098}
+  - {fileID: 5745485245827191290}
+  - {fileID: 643166017676114877}
+  - {fileID: -3211493247950589568}
+  - {fileID: 8749870966729598934}
+  - {fileID: -3207904596538488107}
+  - {fileID: -6154068103145247551}
+  - {fileID: 4341677992497466630}
+  - {fileID: -7627727202496644969}
+  - {fileID: -6267200137310501421}
+  - {fileID: 8437587086348852041}
+  - {fileID: -4821965744682220892}
+  - {fileID: 8695610426334608329}
+  - {fileID: -5519601402780546123}
+  - {fileID: -8150440029717542468}
+  - {fileID: -5312417455114303859}
+  - {fileID: 3573482371790818800}
+  - {fileID: -3277079631172618398}
+  - {fileID: 6456541109940295189}
+  - {fileID: -2220782332246085341}
+--- !u!114 &67251506226214098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a086981b227a3d438cdd044903c10cd, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 40, y: -248}
+  ports:
+    keys:
+    - entry
+    - opt1
+    - opt2
+    values:
+    - _fieldName: entry
+      _node: {fileID: 67251506226214098}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: opt1
+        node: {fileID: 1768484190831949116}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt1
+      _node: {fileID: 67251506226214098}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 643166017676114877}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt2
+      _node: {fileID: 67251506226214098}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: -3211493247950589568}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: {fileID: 0}
+  opt1: {fileID: 0}
+  opt2: {fileID: 0}
+  flirtLine: Is it even possible to feel bad after chatting with you? Hahahaha
+  ourLine: Hi there! Things are going really well. How are things going for you?
+  goodEnd: 0
+--- !u!114 &643166017676114877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a086981b227a3d438cdd044903c10cd, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 440, y: -344}
+  ports:
+    keys:
+    - entry
+    - opt1
+    - opt2
+    values:
+    - _fieldName: entry
+      _node: {fileID: 643166017676114877}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: opt1
+        node: {fileID: 67251506226214098}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt1
+      _node: {fileID: 643166017676114877}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 8749870966729598934}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt2
+      _node: {fileID: 643166017676114877}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: -3207904596538488107}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: {fileID: 0}
+  opt1: {fileID: 0}
+  opt2: {fileID: 0}
+  flirtLine: "Of course, who would want to miss out on such a wonderful partner?
+    You\u2019ll be my lucky charm :)"
+  ourLine: So you're aware of what you can  have :)
+  goodEnd: 0
+--- !u!114 &1768484190831949116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a086981b227a3d438cdd044903c10cd, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -376, y: -120}
+  ports:
+    keys:
+    - entry
+    - opt1
+    - opt2
+    values:
+    - _fieldName: entry
+      _node: {fileID: 1768484190831949116}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt1
+      _node: {fileID: 1768484190831949116}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 67251506226214098}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt2
+      _node: {fileID: 1768484190831949116}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 5745485245827191290}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: {fileID: 0}
+  opt1: {fileID: 0}
+  opt2: {fileID: 0}
+  flirtLine: Hi there, sweet lady. How's your day going?
+  ourLine: 
+  goodEnd: 0
+--- !u!114 &3573482371790818800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a086981b227a3d438cdd044903c10cd, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1608, y: 888}
+  ports:
+    keys:
+    - entry
+    - opt1
+    - opt2
+    values:
+    - _fieldName: entry
+      _node: {fileID: 3573482371790818800}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: opt2
+        node: {fileID: -5312417455114303859}
+        reroutePoints: []
+      - fieldName: opt2
+        node: {fileID: -8150440029717542468}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt1
+      _node: {fileID: 3573482371790818800}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt2
+      _node: {fileID: 3573482371790818800}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: {fileID: 0}
+  opt1: {fileID: 0}
+  opt2: {fileID: 0}
+  flirtLine: 
+  ourLine: It's not for me, I'm sorry.
+  goodEnd: 0
+--- !u!114 &4341677992497466630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a086981b227a3d438cdd044903c10cd, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1256, y: -104}
+  ports:
+    keys:
+    - entry
+    - opt1
+    - opt2
+    values:
+    - _fieldName: entry
+      _node: {fileID: 4341677992497466630}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: opt2
+        node: {fileID: 8749870966729598934}
+        reroutePoints: []
+      - fieldName: opt2
+        node: {fileID: -3207904596538488107}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt1
+      _node: {fileID: 4341677992497466630}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt2
+      _node: {fileID: 4341677992497466630}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: {fileID: 0}
+  opt1: {fileID: 0}
+  opt2: {fileID: 0}
+  flirtLine: 
+  ourLine: You're out of money, and you're begging me? You loser.
+  goodEnd: 0
+--- !u!114 &5745485245827191290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a086981b227a3d438cdd044903c10cd, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 40, y: 248}
+  ports:
+    keys:
+    - entry
+    - opt1
+    - opt2
+    values:
+    - _fieldName: entry
+      _node: {fileID: 5745485245827191290}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: opt2
+        node: {fileID: 1768484190831949116}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt1
+      _node: {fileID: 5745485245827191290}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: -7627727202496644969}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt2
+      _node: {fileID: 5745485245827191290}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: -6267200137310501421}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: {fileID: 0}
+  opt1: {fileID: 0}
+  opt2: {fileID: 0}
+  flirtLine: I'm not doing too bad either, trying to have some fun.
+  ourLine: I'm not doing too bad. How about you?
+  goodEnd: 0
+--- !u!114 &6456541109940295189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a086981b227a3d438cdd044903c10cd, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1624, y: 312}
+  ports:
+    keys:
+    - entry
+    - opt1
+    - opt2
+    values:
+    - _fieldName: entry
+      _node: {fileID: 6456541109940295189}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: opt2
+        node: {fileID: -5519601402780546123}
+        reroutePoints: []
+      - fieldName: opt2
+        node: {fileID: 8695610426334608329}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt1
+      _node: {fileID: 6456541109940295189}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt2
+      _node: {fileID: 6456541109940295189}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: {fileID: 0}
+  opt1: {fileID: 0}
+  opt2: {fileID: 0}
+  flirtLine: 
+  ourLine: "So we don\u2019t even know each other, and yet I\u2019m supposed to throw
+    money at you? Is that right? You don\u2019t even realize what you\u2019re missing
+    out on, you pathetic addict. bye."
+  goodEnd: 0
+--- !u!114 &8437587086348852041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a086981b227a3d438cdd044903c10cd, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 824, y: 200}
+  ports:
+    keys:
+    - entry
+    - opt1
+    - opt2
+    values:
+    - _fieldName: entry
+      _node: {fileID: 8437587086348852041}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: opt1
+        node: {fileID: -7627727202496644969}
+        reroutePoints: []
+      - fieldName: opt1
+        node: {fileID: -6267200137310501421}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt1
+      _node: {fileID: 8437587086348852041}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 8695610426334608329}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt2
+      _node: {fileID: 8437587086348852041}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: -5519601402780546123}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: {fileID: 0}
+  opt1: {fileID: 0}
+  opt2: {fileID: 0}
+  flirtLine: Don't think that wayyyy. The thrill of hitting the jackpot is better
+    than even the best runnn
+  ourLine: Hmm... I don't think gambling is much fun....
+  goodEnd: 0
+--- !u!114 &8695610426334608329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a086981b227a3d438cdd044903c10cd, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1208, y: 104}
+  ports:
+    keys:
+    - entry
+    - opt1
+    - opt2
+    values:
+    - _fieldName: entry
+      _node: {fileID: 8695610426334608329}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: opt1
+        node: {fileID: 8437587086348852041}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt1
+      _node: {fileID: 8695610426334608329}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: -2220782332246085341}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt2
+      _node: {fileID: 8695610426334608329}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 6456541109940295189}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: {fileID: 0}
+  opt1: {fileID: 0}
+  opt2: {fileID: 0}
+  flirtLine: 'All right, here''s the situation: I''m a little strapped for cash right
+    now, but if you help me out, we can both come out ahead. What do you say?'
+  ourLine: You said something a little weird.
+  goodEnd: 0
+--- !u!114 &8749870966729598934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a086981b227a3d438cdd044903c10cd, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 840, y: -344}
+  ports:
+    keys:
+    - entry
+    - opt1
+    - opt2
+    values:
+    - _fieldName: entry
+      _node: {fileID: 8749870966729598934}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: opt1
+        node: {fileID: 643166017676114877}
+        reroutePoints: []
+      - fieldName: opt1
+        node: {fileID: -3211493247950589568}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt1
+      _node: {fileID: 8749870966729598934}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: -6154068103145247551}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: opt2
+      _node: {fileID: 8749870966729598934}
+      _typeQualifiedName: DialogueConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: entry
+        node: {fileID: 4341677992497466630}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: {fileID: 0}
+  opt1: {fileID: 0}
+  opt2: {fileID: 0}
+  flirtLine: My bills are coming due, and we can hit the jackpot  on the slot machine
+    together, baby.
+  ourLine: Hahaha, it's true that I'm an angel, but why do you need luck?
+  goodEnd: 0

@@ -15,8 +15,11 @@ MonoBehaviour:
   horseName: Unholy Spirit
   horseSprite: {fileID: 21300000, guid: 28c2f0b3d802727469b4ec1ad853729a, type: 3}
   horsePictures: []
+  bio: ex police horse, ex racehorse. please be mindful of your league when scrolling
+    and responding
+  funnyAnswer1: 
+  funnyAnswer2: 
   matchable: 1
-  bio: 
   textDialogue: {fileID: 0}
   dateDialogue: {fileID: 0}
   answers: 01000100000000000000000101010100000101010000010000000001000100000101000001000001

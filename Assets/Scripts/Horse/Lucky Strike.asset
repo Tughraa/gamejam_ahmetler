@@ -15,8 +15,11 @@ MonoBehaviour:
   horseName: Lucky Strike
   horseSprite: {fileID: 21300000, guid: 28c2f0b3d802727469b4ec1ad853729a, type: 3}
   horsePictures: []
+  bio: i'm just really bored; i'm looking for someone i can hang out with casually.
+    three-time lucky luke cup champion. I love all kinds of ways to unwind.
+  funnyAnswer1: 
+  funnyAnswer2: 
   matchable: 1
-  bio: 
   textDialogue: {fileID: 0}
   dateDialogue: {fileID: 0}
   answers: 00000001010100000101000000000100000000000100010100010000000101000000010101000001

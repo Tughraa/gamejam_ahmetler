@@ -8,12 +8,14 @@ public class MatchScreenUI : MonoBehaviour
     public Image playerAvatarImage;
     public Image matchedHorseImage;
     public TextMeshProUGUI matchTitleText;
+    public MessagesManager messagesManager;
 
     [Header("Buttons")]
     public Button keepSwipingButton;
     public Button goToMessagesButton;
 
     private HorseData _currentMatchedHorse;
+    private GameObject _currentMatchedHorseTab;
 
     [Header("Sound Effects")]
     public AudioClip buttonClickSoundFX;
@@ -35,6 +37,7 @@ public class MatchScreenUI : MonoBehaviour
 
         // 1. Immediately save this match into our permanent list
         MatchesListManager.Instance?.AddMatch(matchedHorse);
+        _currentMatchedHorseTab = messagesManager.CreateChat(matchedHorse);
 
         // 2. Setup display avatars
         if (playerAvatarImage != null && playerProfile != null)
@@ -63,5 +66,6 @@ public class MatchScreenUI : MonoBehaviour
         SoundManager.instance.PlaySoundEffect(buttonClickSoundFX,0.7f);
         gameObject.SetActive(false);
         ScreenManager.Instance?.OpenMessengerScreenWithHorse(_currentMatchedHorse);
+        _currentMatchedHorseTab.GetComponent<DialogueManager>().OpenMessageTab();
     }
 }

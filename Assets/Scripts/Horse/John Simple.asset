@@ -15,7 +15,8 @@ MonoBehaviour:
   horseName: John Simple
   horseSprite: {fileID: 0}
   horsePictures: []
-  bio: 
+  bio: "ESTP 6-7, I listen to anything that sounds good to me, I love Batman movies,
+    I have a degree in business, and I\u2019d love to grab a coffee with you."
   funnyAnswer1: 
   funnyAnswer2: 
   matchable: 1

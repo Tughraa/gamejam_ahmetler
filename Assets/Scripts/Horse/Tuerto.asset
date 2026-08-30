@@ -15,7 +15,7 @@ MonoBehaviour:
   horseName: Tuerto
   horseSprite: {fileID: 0}
   horsePictures: []
-  bio: 
+  bio: Please don't ask what my name means or what happened to my eye...
   funnyAnswer1: 
   funnyAnswer2: 
   matchable: 1

@@ -94,6 +94,10 @@ public class DialogueManager : MonoBehaviour
             EndDialogue(node.goodEnd);
         }
     }
+    public void CloseDialogues()
+    {
+        messagesManager.CloseTabs();
+    }
     public void EndDialogue(bool good)
     {
         if (good)
@@ -150,31 +154,4 @@ public class DialogueManager : MonoBehaviour
 
         LoadNode(next);
     }
-    /*
-    IEnumerator RoutineOpt1()
-    {
-        DialogueOpt selected = opt1;
-        NewBox(selected.ourLine, false);
-
-        yield return new WaitForSeconds(ourLineTime);
-
-        NewBox(selected.flirtLine, true);
-        opt1 = selected.opt1;
-        opt2 = selected.opt2;
-    
-        UpdateButtons();
-    }
-    IEnumerator RoutineOpt2()
-    {
-        DialogueOpt selected = opt1;
-        NewBox(selected.ourLine, false);
-
-        yield return new WaitForSeconds(ourLineTime);
-
-        NewBox(selected.flirtLine, true);
-        opt1 = selected.opt1;
-        opt2 = selected.opt2;
-    
-        UpdateButtons();
-    }*/
 }
